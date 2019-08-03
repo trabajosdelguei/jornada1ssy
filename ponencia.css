@@ -1,0 +1,40 @@
+.logoMain{
+    
+}
+
+.card-header{
+    background-color: #005A78;
+}
+
+.tema, .estadoF, .estadoC, .estadoP{
+    color: white;
+}
+
+.estadoF, .estadoC, .estadoP{
+    width: 10rem;
+    text-align: center;
+}
+
+.subtitulo, .infoTema, .card-title, .card-text{
+    color: #002E3D;
+}
+
+.estadoF{
+    background-color: rgba(240, 47, 47, 0.8);
+    border-radius: 8px;
+}
+
+.estadoC{
+    background-color: rgba(57, 163, 239, 0.8);
+    border-radius: 8px;
+}
+
+.estadoP{
+    background-color: rgba(9, 213, 115, 0.8);
+    border-radius: 8px;
+}
+
+.iconArrow{
+    width: 32px;
+    height: 32px;
+}

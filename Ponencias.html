@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Ponencias</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="ponencia.css">
+</head>
+<body>
+    <!--Header con Grid-->
+    <div class="container-flex header">
+        <div class="row mx-3">
+            <div class="col-3 p-0">
+                    <img class="img-fluid logoMain" src="logossy.jpg">
+            </div>
+            <div class="col-9 mx-auto pb-1 px-0 align-self-end">
+                <nav class="navbar navbar-expand-md navbar-light ml-2 p-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active mx-2">
+                                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Ponencias</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                            <a class="nav-link" href="#">Organizadores</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Ubicación</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#">Iniciar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--Header con Flex
+    <div class="container-flex d-flex align-items-end header p-3">
+        <img class="logoMain" src="logossy.jpg">
+        <nav class="navbar navbar-expand-md navbar-light p-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active m-1 mx-md-2">
+                                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item m-1 mx-md-2">
+                            <a class="nav-link" href="#">Ponencias</a>
+                            </li>
+                            <li class="nav-item m-1 mx-md-2">
+                            <a class="nav-link" href="#">Organizadores</a>
+                            </li>
+                            <li class="nav-item m-1 mx-md-2">
+                                <a class="nav-link" href="#">Ubicación</a>
+                            </li>
+                            <li class="nav-item m-1 mx-md-2">
+                                <a class="nav-link" href="#">Iniciar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+        </nav>
+    </div>
+    -->
+    <h1>Ejemplo de Ponencias con Collapse</h1>
+    <div class="container-flex mx-5">
+        <div class="ponenciasList" id="ponenciasList">
+            <!--Tema 1-->
+            <div class="card ponencia my-2">
+                <a class="" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="card-header d-flex align-items-center" id="headingOne">
+                        <div class="p-2 flex-grow-1 tema">
+                            <h3>Tema 1. Expediente Clínico</h3>
+                        </div>
+                        <div class="p-2 mr-4 estadoF">Estado: Finalizado</div>
+                        <div class="p-2"><img class="iconArrow" src="downArrow.png"></div>
+                    </div>
+                </a>
+          
+                <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#ponenciasList">
+                    <div class="card-body">
+                        <h4 class="subtitulo">Subtítulo del tema</h4>
+                        <h5 class="infoTema">Duración: 60 minutos.<br>Lugar: Auditorio</h5>
+                        <div class="row my-2 justify-content-center">
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tema 2-->
+            <div class="card ponencia my-2">
+                <a class="" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <div class="card-header d-flex align-items-center" id="headingTwo">
+                        <div class="p-2 flex-grow-1 tema">
+                            <h3>Tema 2. Expediente Clínico</h3>
+                        </div>
+                        <div class="p-2 mr-4 estadoF">Estado: Finalizado</div>
+                        <div class="p-2"><img class="iconArrow" src="downArrow.png"></div>
+                    </div>
+                </a>
+              
+                <div id="collapseTwo" class="collapse hide" aria-labelledby="headingTwo" data-parent="#ponenciasList">
+                    <div class="card-body">
+                        <h4 class="subtitulo">Subtítulo del tema</h4>
+                        <h5 class="infoTema">Duración: 60 minutos.<br>Lugar: Auditorio</h5>
+                        <div class="row my-2 justify-content-center">
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tema 3-->
+            <div class="card ponencia my-2">
+                <a class="" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <div class="card-header d-flex align-items-center" id="headingThree">
+                        <div class="p-2 flex-grow-1 tema">
+                            <h3>Tema 3. Expediente Clínico</h3>
+                        </div>
+                        <div class="p-2 mr-4 estadoF">Estado: Finalizado</div>
+                        <div class="p-2"><img class="iconArrow" src="downArrow.png"></div>
+                    </div>
+                </a>
+                  
+                <div id="collapseThree" class="collapse hide" aria-labelledby="headingThree" data-parent="#ponenciasList">
+                    <div class="card-body">
+                        <h4 class="subtitulo">Subtítulo del tema</h4>
+                        <h5 class="infoTema">Duración: 60 minutos.<br>Lugar: Auditorio</h5>
+                        <div class="row my-2 justify-content-center">
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tema 4-->
+            <div class="card ponencia my-2">
+                <a class="" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <div class="card-header d-flex align-items-center" id="headingFour">
+                        <div class="p-2 flex-grow-1 tema">
+                            <h3>Tema 4. Expediente Clínico</h3>
+                        </div>
+                        <div class="p-2 mr-4 estadoC">Estado: En curso</div>
+                        <div class="p-2"><img class="iconArrow" src="downArrow.png"></div>
+                    </div>
+                </a>
+                      
+                <div id="collapseFour" class="collapse hide" aria-labelledby="headingFour" data-parent="#ponenciasList">
+                    <div class="card-body">
+                        <h4 class="subtitulo">Subtítulo del tema</h4>
+                        <h5 class="infoTema">Duración: 60 minutos.<br>Lugar: Auditorio</h5>
+                        <div class="row my-2 justify-content-center">
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tema 5-->
+            <div class="card ponencia my-2">
+                <a class="" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    <div class="card-header d-flex align-items-center" id="headingFive">
+                        <div class="p-2 flex-grow-1 tema">
+                            <h3>Tema 5. Expediente Clínico</h3>
+                        </div>
+                        <div class="p-2 mr-4 estadoP">Estado: Próximo</div>
+                        <div class="p-2"><img class="iconArrow" src="downArrow.png"></div>
+                    </div>
+                </a>
+              
+                <div id="collapseFive" class="collapse hide" aria-labelledby="headingFive" data-parent="#ponenciasList">
+                    <div class="card-body">
+                        <h4 class="subtitulo">Subtítulo del tema</h4>
+                        <h5 class="infoTema">Duración: 60 minutos.<br>Lugar: Auditorio</h5>
+                        <div class="row my-2 justify-content-center">
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="card px-2 py-1">
+                                    <img src="https://img.icons8.com/bubbles/2x/user.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Nombre del ponente (Rol de la ponencia)</h5>
+                                        <p class="card-text">Lugar de procedencia. Contenido a exponer</p>
+                                        <a href="#" class="btn btn-primary">Ver información</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
