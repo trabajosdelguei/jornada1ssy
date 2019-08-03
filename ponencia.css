@@ -1,18 +1,9 @@
-.logoMain{
-    
-}
-
 .card-header{
     background-color: #005A78;
 }
 
 .tema, .estadoF, .estadoC, .estadoP{
     color: white;
-}
-
-.estadoF, .estadoC, .estadoP{
-    width: 10rem;
-    text-align: center;
 }
 
 .subtitulo, .infoTema, .card-title, .card-text{
@@ -37,8 +28,4 @@
 .iconArrow{
     width: 32px;
     height: 32px;
-}
-
-#sticky-footer {
-    flex-shrink: none;
 }
