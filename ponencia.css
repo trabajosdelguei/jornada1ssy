@@ -38,3 +38,7 @@
     width: 32px;
     height: 32px;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+}
