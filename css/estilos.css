@@ -5,9 +5,9 @@ background-color: rgba(0, 0, 0, 0.7);
 
 }
 
-.carousel-inner.item.image{
-  max-width: 100%;
-  max-height: 50%;
+.carousel-inner .carousel-item .carousel-caption img{
+ width:150px;
+ height:150px;
 }
 
 .carousel-caption h5{
@@ -25,39 +25,9 @@ background-color: rgba(0, 0, 0, 0.7);
   color:#FFFFFF;
 }
 
+.carousel-caption{
 
-
-/*Tarjetas collapse*/
-.card-header{
-    background-color: #005A78;
-}
-
-.tema, .estadoF, .estadoC, .estadoP{
-    color: white;
-}
-
-.subtitulo, .infoTema, .card-title, .card-text{
-    color: #002E3D;
-}
-
-.estadoF{
-    background-color: rgba(240, 47, 47, 0.8);
-    border-radius: 8px;
-}
-
-.estadoC{
-    background-color: rgba(57, 163, 239, 0.8);
-    border-radius: 8px;
-}
-
-.estadoP{
-    background-color: rgba(9, 213, 115, 0.8);
-    border-radius: 8px;
-}
-
-.iconArrow{
-    width: 32px;
-    height: 32px;
+  position: absolute;
 }
 
 
