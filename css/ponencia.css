@@ -1,3 +1,14 @@
+@media (min-width: 320px){
+    .tema{
+        font-size: 1.5rem;
+    }
+
+    .heading{
+        padding: .5rem;
+    }
+}
+
+
 .card-header{
     background-color: #005A78;
 }
@@ -7,7 +18,7 @@
 }
 
 .estadoF, .estadoC, .estadoP{
-    width: 142px;
+    width: 152px;
     border-radius: 8px;
     text-align: center;
 }
