@@ -1,6 +1,6 @@
 @media (min-width: 320px){
     .tema{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .heading{
@@ -40,6 +40,15 @@
 }
 
 .iconArrow{
+    width: 32px;
+    height: 32px;
+}
+
+#sticky-footer{
+    background-color: #005A78;
+}
+
+.sn-icon{
     width: 32px;
     height: 32px;
 }
