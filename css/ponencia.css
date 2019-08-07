@@ -11,6 +11,14 @@ body{
     }
 }
 
+.bg-img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+    height: 100% !important;
+}
 
 .card-header{
     background-color: #005A78;
