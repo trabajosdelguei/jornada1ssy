@@ -1,14 +1,19 @@
-
+/*carousel*/
 
 .carousel-item{
-background-color: rgba(0, 0, 0, 0.0);
+background-color: rgba(0, 0, 0, 0.3);
 
 }
 
-.carousel-inner{
- background-image: url("../images/slide.jpg");
- background-position: center;
-background-size: auto;
+
+.bg-img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .carousel-inner .row{
@@ -38,7 +43,7 @@ background-size: auto;
     overflow:hidden;
     padding-bottom:50%;
     position:relative;
-    height:0;
+    height:100%;
 }
 .map-responsive iframe{
     left:0;
@@ -52,7 +57,7 @@ background-size: auto;
 
 /*medias*/
 
-@media (min-width: 320px) {
+@media only screen and (min-width: 320px) {
 
 .carousel-inner .carousel-item img{
   width: 150px;
@@ -83,6 +88,36 @@ background-size: auto;
   text-align: center;
 }
 
+}
+
+@media (min-width: 360px) {
+.carousel-inner .carousel-item img{
+  width: 180px;
+    height: 180px;
+    margin-left: 5px;
+}
+
+.carousel-indicators {
+    
+    top: 410px;
+  }
+
+.carousel h5{
+  font-size: 15px;
+  color:#FFFFFF;
+  padding-left: 35px;
+}
+
+.carousel h4{
+  font-size: 12px;
+  color:#FFFFFF;
+}
+
+.carousel p{
+  color:#FFFFFF;
+  font-size: 11px;
+  
+}
 }
 
 
@@ -145,6 +180,46 @@ background-size: auto;
   font-size: 11px;
   text-align: center;
 }
+
+}
+@media (min-width: 600px) {
+.carousel-inner .carousel-item img{
+ width: 130px;
+    height: 130px;
+    margin-left: 27px;
+
+}
+
+.carousel-indicators {
+    
+    top: 205px;
+  }
+
+.carousel h5{
+  font-size: 13px;
+    color: #FFFFFF;
+    padding-left: 15px;
+    margin-left: 30px;
+    width: 150px;
+}
+
+.carousel h4{
+ font-size: 11px;
+    color: #FFFFFF;
+    margin-right: 20px;
+    width: 215px;
+}
+
+.carousel p{
+      color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 23px;
+    width: 150px;
+}
+
+
+
 }
 
 @media (min-width: 768px) {
@@ -189,8 +264,7 @@ background-size: auto;
 
 }
 
-
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
 .carousel-inner .carousel-item img{
   width: 160px;
   height: 160px;
@@ -214,8 +288,50 @@ background-size: auto;
 .carousel h4{
   font-size: 12px;
   color:#FFFFFF;
-  width: 400px
-  height:auto;
+  width: 310px;
+  
+  margin-right: 10px;
+}
+
+.carousel p{
+  color:#FFFFFF;
+  font-size: 11px;
+  width: 200px;
+  height: auto;
+  text-align: center;
+ margin-left: -6px;
+}
+
+
+
+}
+
+@media (min-width: 1024px) {
+.carousel-inner .carousel-item img{
+  width: 160px;
+  height: 160px;
+
+}
+
+.carousel-indicators {
+    
+    top: 240px;
+  }
+
+.carousel h5{
+  font-size: 15px;
+  color:#FFFFFF;
+  text-align: center;
+  margin-left:0px;
+  width: 200px;
+  height: auto;
+}
+
+.carousel h4{
+  font-size: 12px;
+  color:#FFFFFF;
+  width: 400px;
+  
   margin-right: 30px;
 }
 
@@ -235,24 +351,23 @@ background-size: auto;
 
 }
 
-
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
 .carousel-inner .carousel-item img{
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
 
 }
 
 .carousel-indicators {
     
-    top: 290px;
+    top: 240px;
   }
 
 .carousel h5{
-  font-size: 18px;
+  font-size: 15px;
   color:#FFFFFF;
   text-align: center;
-  margin-left:20px;
+  margin-left:0px;
   width: 200px;
   height: auto;
 }
@@ -260,18 +375,67 @@ background-size: auto;
 .carousel h4{
   font-size: 16px;
   color:#FFFFFF;
-  width: 100%;
-  height:auto;
- 
+  width: 400px;
+  
+  margin-right: 30px;
 }
 
 .carousel p{
-  color:#FFFFFF;
-  font-size: 15px;
-  width: 250px;
-  height: auto;
-  text-align: center;
+ color: #FFFFFF;
+    font-size: 13px;
+    width: 260px;
+    height: auto;
+    text-align: center;
+    margin-left: -35px;
+}
+
+.carousel-inner .carousel-item .col-sm-3{
+
   padding-left: 30px;
+}
+
+}
+
+
+@media (min-width: 1440px) {
+.carousel-inner .carousel-item img{
+  width: 250px;
+  height: 250px;
+
+}
+
+
+.carousel-inner .row{
+  min-height: 400px;
+}
+.carousel-indicators {
+    
+    top: 380px;
+  }
+
+.carousel h5{
+  font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: 50px;
+    width: 200px;
+    height: auto;
+}
+
+.carousel h4{
+ font-size: 16px;
+    color: #FFFFFF;
+    width: 480px;
+    margin-right: 30px;
+}
+
+.carousel p{
+  color: #FFFFFF;
+    font-size: 15px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+    margin-left: 15px;
 }
 
 .carousel-inner .carousel-item .col-sm-3{
