@@ -41,7 +41,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .map-responsive{
     overflow:hidden;
-    padding-bottom:50%;
+    padding-bottom:450px;
     position:relative;
     height:100%;
 }
@@ -67,7 +67,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .carousel-indicators {
     
-    top: 425px;
+    top: 390px;
   }
 
 .carousel h5{
@@ -99,7 +99,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .carousel-indicators {
     
-    top: 410px;
+    top: 380px;
   }
 
 .carousel h5{
@@ -130,7 +130,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .carousel-indicators {
     
-    top: 410px;
+    top: 390px;
   }
 
 .carousel h5{
@@ -160,7 +160,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .carousel-indicators {
     
-    top: 380px;
+    top: 360px;
   }
 
 .carousel h5{
@@ -231,7 +231,7 @@ background-color: rgba(0, 0, 0, 0.3);
 
 .carousel-indicators {
     
-    top: 260px;
+    top: 250px;
   }
 
 .carousel h5{
