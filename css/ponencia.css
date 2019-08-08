@@ -1,3 +1,26 @@
+body{
+    font-family: 'Barlow', sans-serif;
+}
+@media (min-width: 320px){
+    .tema{
+        font-size: 1.25rem;
+    }
+
+    .heading{
+        padding: .5rem;
+    }
+}
+
+.bg-img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .card-header{
     background-color: #005A78;
 }
@@ -7,7 +30,7 @@
 }
 
 .estadoF, .estadoC, .estadoP{
-    width: 142px;
+    width: 152px;
     border-radius: 8px;
     text-align: center;
 }
@@ -29,6 +52,15 @@
 }
 
 .iconArrow{
+    width: 32px;
+    height: 32px;
+}
+
+#sticky-footer{
+    background-color: #005A78;
+}
+
+.sn-icon{
     width: 32px;
     height: 32px;
 }
