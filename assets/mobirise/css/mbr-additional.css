@@ -9,6 +9,9 @@ body {
   font-style: normal;
   line-height: 1.5;
 }
+.clearfix{
+   overflow: auto;
+}
 .mbr-overlay
 {
 min-height: 3.5em;
@@ -78,7 +81,7 @@ position: center;
 @media (max-width: 768px) {
   .display-1 {
     font-size: 3.4rem;
-    font-size: calc( 2.1374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20)));
+    font-size: calc( 1.374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20)));
     line-height: calc( 1.4 * (2.1374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-2 {
@@ -97,6 +100,14 @@ position: center;
     line-height: calc( 1.4 * (1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20))));
   }
 }
+
+@media (max-width: 374px) {
+  .display-1 {
+    font-size: 3.4rem;
+    font-size: calc( 1.1374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc( 1.4 * (2.1374999999999997rem + (4.25 - 2.1374999999999997) * ((100vw - 20rem) / (48 - 20))));
+  }
+  }
 /* Buttons */
 .btn {
   font-weight: 500;
@@ -501,7 +512,7 @@ position: center;
   color: #000000 !important;
 }
 .text-gray {
-  color: #4d4d4d !important;
+  color: #002E3D !important;
 }
 a.text-primary:hover,
 a.text-primary:focus {
@@ -537,7 +548,7 @@ a.text-black:focus {
 }
 a.text-gray:hover,
 a.text-gray:focus {
-  color: #272635 !important;
+  color: #009BCE !important;
 }
 .alert-success {
   background-color: #70c770;
@@ -753,6 +764,7 @@ pre {
     font-size: 1rem !important;
   }
 }
+
 /* Social block */
 .btn-social {
   font-size: 20px;
