@@ -19,11 +19,6 @@
     height: 100% !important;
 }
 
-
-.card-header{
-    background-color: #005A78;
-}
-
 .tema, .estadoF, .estadoC, .estadoP{
     color: white;
 }
@@ -62,4 +57,24 @@
 .sn-icon{
     width: 32px;
     height: 32px;
+}
+
+#headingOne{
+    background-color: #F74A24;
+}
+
+#headingTwo{
+    background-color: #2573B7;
+}
+
+#headingThree{
+    background-color: #049464;
+}
+
+#headingFour{
+    background-color: #950F78;
+}
+
+#headingFive{
+    background-color: #F9C009;
 }
