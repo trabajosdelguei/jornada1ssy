@@ -136,7 +136,7 @@
                     </div>
                     <div class="buttons-wrap">
 
-                        <button href="http://mobirisethemes.com" class="btn btn-primary"  type="submit" role="button"><a text-align="center">INSCRÍBETE</a></button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm"><a text-align="center">INSCRÍBETE</a></button>
                     </div>
                 </form>
             </div>
@@ -146,8 +146,101 @@
         </div>
     </div>
 </section>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFormTitle">Formulario de registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Nombre completo</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre completo" required>
+                                <div class="invalid-feedback">
+                                    Campo incompleto
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustomUsername">E-mail</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="validationCustomUsername" placeholder="E-mail" data-form-field="Email" required>
+                                    <div class="invalid-feedback">
+                                        Campo incompleto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-3">
+                                <label for="inputState">Institución de proveniencia</label>
+                                <select id="inputInstitucion" class="form-control" onchange="mostrarExtras(this)">
+                                    <option value="neutro" selected>Escoge tu institución ...</option>
+                                    <option value="inst1">IMSS</option>
+                                    <option value="inst2">ISSSTE</option>
+                                    <option value="inst3">UADY</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Campos del SSY-->
+                        <div id="inst1" class="form-row hide">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Nombre completo</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre completo" required>
+                                <div class="invalid-feedback">
+                                    Campo incompleto
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustomUsername">E-mail</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="validationCustomUsername" placeholder="E-mail" data-form-field="Email" required>
+                                    <div class="invalid-feedback">
+                                        Campo incompleto
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin de camops del SYY-->
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" aria-describedby="passwordHelpBlock" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Acepto que la información proporcionada es correcta verídica
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes aceptar la veracidad de la información proporcionada
+                                </div>
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin de Modal-->
 
- <div class="container-flex mx-5 mt-5 ">
+    <div class="container-flex mx-5 mt-5 ">
         <div class="ponenciasList" id="ponenciasList">
             <!--Tema 1-->
             <div class="card ponencia my-2 tema1">
@@ -179,7 +272,7 @@
                                         <h5 class="card-title">Nombre del ponente / Exposición</h5>
                                         <p class="card-text">CODAMEDY</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +311,7 @@
                                         <h5 class="card-title">Dra. Guadalupe Utrilla Lazos</h5>
                                         <p class="card-text">IMSS. Modelo de Gestión Institucional</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -230,7 +323,7 @@
                                         <h5 class="card-title">Lic. Enf. Glendy Anilú Bojórquez Sabido</h5>
                                         <p class="card-text">HRAEPY. Modelo de Gestión del Consejo Nacional de Salubridad</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +335,7 @@
                                         <h5 class="card-title">Dra. Blandina del R. Lizama Maldonado / Panel</h5>                                                
                                         <p class="card-text">SSY. Modelo de Gestión de Calidad en Salud</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -281,7 +374,7 @@
                                         <h5 class="card-title">Dra. Niurka Trujillo Paredes / Exposición</h5>
                                         <p class="card-text">Universidad Anáhuac Mayab</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -293,7 +386,7 @@
                                         <h5 class="card-title">Mtra. Rebeca Sosa Cárdenas / Exposición</h5>
                                         <p class="card-text">UADY Facultad de Enfermería</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -307,8 +400,8 @@
                 <a class="" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                     <div class="card-header d-flex align-items-center heading" id="headingFour">
                         <div class="flex-grow-1">
-                            <div class="row m-0 p-0">
-                                <div class="col mx-0 my-1 align-items-center">
+                            <div class="row m-0 p-0 align-items-center">
+                                <div class="col mx-0 my-1">
                                     <h3 class="tema my-auto font-weight-bolder">Tema 4. Aval Ciudadano</h3>
                                 </div>
                                 <div class="col-sm-4 mx-0 my-1">
@@ -332,7 +425,7 @@
                                         <h5 class="card-title">Dr. Efraín Canto Hernández / Exposición</h5>
                                         <p class="card-text">SEMAR. Novena Zona Naval</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -346,8 +439,8 @@
                 <a class="" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                     <div class="card-header d-flex align-items-center heading" id="headingFive">
                         <div class="flex-grow-1">
-                            <div class="row m-0 p-0">
-                                <div class="col mx-0 my-1 align-items-center">
+                            <div class="row m-0 p-0 align-items-center">
+                                <div class="col mx-0 my-1">
                                     <h3 class="tema my-auto font-weight-bolder">Tema 5. Atención Limpia, Una Atención Segura</h3>
                                 </div>
                                 <div class="col-sm-4 mx-0 my-1">
@@ -371,7 +464,7 @@
                                         <h5 class="card-title">Por definir</h5>
                                         <p class="card-text">SSY</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -383,7 +476,7 @@
                                         <h5 class="card-title">Por definir</h5>
                                         <p class="card-text">ISSTE</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -395,7 +488,7 @@
                                         <h5 class="card-title">Por definir / Mesa Panel</h5>                                                
                                         <p class="card-text">Institución Educativa</p>
                                         <div class="m-0 p-0 d-flex justify-content-center">
-                                            <a href="#" class="btn btn-secondary">Ver información</a>
+                                            <a href="#" class="btn btn-primary">Ver información</a>
                                         </div>
                                     </div>
                                 </div>
@@ -407,7 +500,6 @@
         </div>
     </div>
     
-
     <div class="container-flex mx-5 mt-5" id="#slider">
         
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -495,20 +587,9 @@
          </div>
   </div>
 
-
-
-
     <div class="map-responsive mt-5 mx-5">
       <iframe src="https://maps.google.com/maps?q=hospital%20susula&t=&z=13&ie=UTF8&iwloc=&output=embed" width="1920" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-
-
-
-
-
-
-
-
 
     <!--Footer-->
     <footer id="sticky-footer" class="mt-1 py-3 text-white">
@@ -542,9 +623,6 @@
         </div>
     </footer>
 
-
-
-
   <script src="../assets/web/assets/jquery/jquery.min.js"></script>
   <script src="../assets/popper/popper.min.js"></script>
   <script src="../assets/tether/tether.min.js"></script>
@@ -558,7 +636,31 @@
   <script src="../assets/jarallax/jarallax.min.js"></script>
   <script src="../assets/theme/js/script.js"></script>
   <script src="../assets/formoid/formoid.min.js"></script>
-  
+  <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+
+        function mostrarExtras(combo) {
+            var tipo = combo;
+            alert(tipo);
+        }
+    </script>
   </div> 
 </body>   
 </html>
