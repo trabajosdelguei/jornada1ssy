@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <form id="registro" class="needs-validation" novalidate>
+        <div class="modal-body">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" minlength="5" placeholder="Nombre completo" required>
+                    <div class="invalid-feedback">
+                        Campo incompleto
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" data-form-field="Email" required>
+                    <div class="invalid-feedback">
+                        Campo incompleto
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="institucion">Institución de proveniencia</label>
+                    <select id="institucion" class="form-control" name="institucion" onchange="mostrarExtras(this)" required>
+                        <option value="" selected="selected">Escoge tu institución ...</option>
+                        <option value="IMSS">IMSS</option>
+                        <option value="ISSSTE">ISSSTE</option>
+                        <option value="UADY">UADY</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Escoge tu institución
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <!--Campos del SSY-->
+                    <div id="ISSSTE" class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="rfc">RFC</label>
+                            <input type="text" class="form-control" id="rfc" name="rfc" minlength="5" placeholder="RFC" required>
+                            <div class="invalid-feedback">
+                                Campo incompleto
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin de camops del SYY-->
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" aria-describedby="passwordHelpBlock" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Acepta que la información proporcionada es correcta y verídica.
+                    </label>
+                    <div class="invalid-feedback">
+                        Debes aceptar que la información proporcionada es correcta y verídica.
+                    </div>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Antes del registro, verifica que la información proporcionada en los campos anteriores es exacta, ya que dicha información será usada para generar tu ...
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="registrarBtn">Registrar</button>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/inicio.js"></script>
+</body>
+</html>
