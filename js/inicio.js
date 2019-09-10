@@ -42,6 +42,7 @@
                     })
                     .done(function( data, textStatus, jqXHR ) {
                         if ( console && console.log ) {
+                            alert("Nuevo registro: "+data.name+", "+data.email+", "+data.institution+", "+data.validated);
                             console.log(data);
                         }
                     })
