@@ -8,71 +8,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <form id="registro" class="needs-validation" novalidate>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
         <div class="modal-body">
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" minlength="5" placeholder="Nombre completo" required>
-                    <div class="invalid-feedback">
-                        Campo incompleto
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" data-form-field="Email" required>
-                    <div class="invalid-feedback">
-                        Campo incompleto
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="institucion">Institución de proveniencia</label>
-                    <select id="institucion" class="form-control" name="institucion" onchange="mostrarExtras(this)" required>
-                        <option value="" selected="selected">Escoge tu institución ...</option>
-                        <option value="IMSS">IMSS</option>
-                        <option value="ISSSTE">ISSSTE</option>
-                        <option value="UADY">UADY</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Escoge tu institución
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <!--Campos del SSY-->
-                    <div id="ISSSTE" class="form-row">
-                        <div class="col-md-6 mb-3">
-                            <label for="rfc">RFC</label>
-                            <input type="text" class="form-control" id="rfc" name="rfc" minlength="5" placeholder="RFC" required>
-                            <div class="invalid-feedback">
-                                Campo incompleto
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fin de camops del SYY-->
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" aria-describedby="passwordHelpBlock" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Acepta que la información proporcionada es correcta y verídica.
-                    </label>
-                    <div class="invalid-feedback">
-                        Debes aceptar que la información proporcionada es correcta y verídica.
-                    </div>
-                    <small id="passwordHelpBlock" class="form-text text-muted">
-                        Antes del registro, verifica que la información proporcionada en los campos anteriores es exacta, ya que dicha información será usada para generar tu ...
-                    </small>
-                </div>
-            </div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor ut erat a sagittis. Morbi vel convallis erat, vitae ultrices eros. Mauris augue odio, malesuada euismod lectus et, faucibus molestie neque. Nam tristique blandit convallis. Maecenas leo purus, porttitor ac dolor eu, finibus dictum velit. Proin sodales fermentum tellus, ac ullamcorper felis dignissim vel. Praesent et nisi metus. Vivamus varius id leo et aliquam. Integer facilisis orci ut enim porttitor lacinia. Morbi rhoncus eleifend lectus et convallis. Donec ut gravida lorem. Curabitur egestas augue vel risus viverra iaculis nec eget odio. Quisque massa risus, vulputate id risus et, dapibus varius ligula. Aenean elementum enim sed quam iaculis consectetur. Fusce porttitor condimentum nulla elementum placerat.
+
+            Ut eu ligula hendrerit, dapibus metus ut, porta est. Fusce tempus feugiat enim id molestie. Suspendisse sollicitudin sollicitudin dolor vel blandit. Quisque ac tellus eget purus tempor dapibus nec id quam. Aliquam a viverra nunc. Donec tempor enim ut ultrices tempor. In eget luctus arcu, ac bibendum velit. In finibus ornare mollis. Maecenas rhoncus eleifend ex, scelerisque consequat tortor vulputate ut. Pellentesque vehicula tortor at massa luctus, quis commodo magna ornare. Donec velit justo, auctor sed finibus scelerisque, egestas sit amet ligula. Proin ligula felis, pharetra at bibendum et, consectetur id massa.
+            
+            Nam varius laoreet commodo. Mauris congue pulvinar maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus laoreet nisi vel neque accumsan, vitae vestibulum tellus suscipit. Ut quis ipsum id augue bibendum vestibulum eget quis turpis. Nunc dictum placerat tellus, blandit dictum ipsum maximus eget. Aliquam ut rhoncus diam. Morbi commodo magna ac leo maximus, ac sagittis quam dignissim. In nec lacus mauris.
+            
+            Donec hendrerit odio quis turpis sodales, congue lacinia metus tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi eu dolor sed magna iaculis sagittis vitae nec eros. Mauris tincidunt euismod vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dapibus justo ut vulputate iaculis. Curabitur at libero vulputate, euismod magna a, cursus arcu.
+            
+            In imperdiet quam diam, vitae auctor nibh tincidunt eu. Aliquam erat volutpat. Morbi vulputate tincidunt tincidunt. Etiam sit amet aliquet ante, sit amet molestie mauris. Suspendisse sed felis efficitur, pharetra neque sit amet, fringilla dolor. Aenean consequat commodo purus. Sed eu velit felis. Curabitur purus augue, vestibulum sit amet consequat commodo, ornare id velit. Praesent dui justo, congue vitae malesuada eu, dignissim vel tellus.
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" id="registrarBtn">Registrar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
-    </form>
+      </div>
+    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
