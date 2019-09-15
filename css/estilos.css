@@ -1,5 +1,6 @@
 .wrapper{
 background:#758ccb;
+
 }
 
 
@@ -82,6 +83,25 @@ color: #b7cb75;
 
 /*medias carousel*/
 
+
+
+@media only screen and (min-width:1024px ){
+  .wrapper{
+    width: 87%;
+    margin-top: -35px;
+  }
+
+  .img-area{
+    width: 150px;
+    height: 150px;
+  }
+   .img-text p{
+    font-size: 14px;
+  }
+
+}
+
+
 @media only screen and (min-width:768px ) and (max-width: 991px){
   .wrapper{
     width: 87%;
@@ -97,7 +117,7 @@ color: #b7cb75;
 
 }
 
-@media only screen and(max-width: 768px){
+@media only screen and(min-width: 768px){
   .wrapper{
     width: 90%
   }
