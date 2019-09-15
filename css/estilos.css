@@ -55,9 +55,8 @@ color: #b7cb75;
   width: 15px !important;
   background-color: #F30627;
   border-radius: 50%
-  opacity:0.8;
  
-   }
+  }
 
    .owl-dot .active{
     background-color:#F30627 !important;
@@ -132,5 +131,5 @@ color: #b7cb75;
    .wrapper{
     width: 71%
    }
-
+  }
 }
