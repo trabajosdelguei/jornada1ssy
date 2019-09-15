@@ -1,9 +1,7 @@
 .wrapper{
 background:#758ccb;
 }
-.wrapper h2{
-  margin-bottom: -200px;
-}
+
 .section-padding{
   padding: 60px 0;
 }
@@ -63,14 +61,14 @@ color: #b7cb75;
   display: inline-block;
   height: 15px !important;
   width: 15px !important;
-  background-color: #ffffff;
+  background-color: #F30627;
   border-radius: 50%
   opacity:0.8;
  
    }
 
    .owl-dot .active{
-    background-color:#8975cb !important;
+    background-color:#F30627 !important;
    }
 
  
@@ -101,7 +99,7 @@ color: #b7cb75;
 
 @media only screen and (min-width:768px ) and (max-width: 991px){
   .wrapper{
-    width: 100%;
+    width: 87%;
   }
 
   .img-area{
@@ -116,7 +114,7 @@ color: #b7cb75;
 
 @media only screen and(max-width: 768px){
   .wrapper{
-    width: 100%
+    width: 90%
   }
 
   .img-area{
@@ -129,10 +127,14 @@ color: #b7cb75;
 
 }
 
-@media only screen and (min-width:320px ) and (max-width: 767px){
+@media only screen and (min-width:375px ) and (max-width: 767px){
   .wrapper{
-    width: 100%;
+    width: 75%;
     
+  }
+
+  .hueco{
+    display: none;
   }
 
   .img-area{
@@ -143,7 +145,9 @@ color: #b7cb75;
   .img-text p{
     font-size: 14px;
   }
-
-
+ @media only screen and(max-width: 320px){
+   .wrapper{
+    width: 71%
+   }
 
 }
