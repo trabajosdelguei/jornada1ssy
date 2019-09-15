@@ -127,15 +127,12 @@ color: #b7cb75;
 
 }
 
-@media only screen and (min-width:375px ) and (max-width: 767px){
+@media only screen and (min-width:374px ) and (max-width: 767px){
   .wrapper{
     width: 75%;
     
   }
 
-  .hueco{
-    display: none;
-  }
 
   .img-area{
     width: 150px;
