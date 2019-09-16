@@ -10,12 +10,17 @@ $inscritos = array();
 while ($columna = mysqli_fetch_array( $resultado, MYSQLI_ASSOC ))
 {
     $inscritos[]=json_encode($columna,JSON_NUMERIC_CHECK | JSON_FORCE_OBJECT);
-    //$inscrito = '{ "nombre":"'. $columna['nombre'].'","email":"'.$columna['email'].'","institucion":"'.$columna['institucion'].'","confirmacion":'.$columna['confimacion'].',"asistencia":'.$columna['asistencia'].'}';
 }
-
-foreach ($inscritos as &$valor) {
-    echo $valor;
+/*
+if($inscritos!=null){
+    foreach ($inscritos as &$valor) {
+        echo $valor;
+    }
 }
+else{
+    echo 'Sin inscritos';
+}
+*/
 
 mysqli_close( $conexion );
 ?>
