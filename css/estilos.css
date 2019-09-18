@@ -85,11 +85,7 @@ color: #b7cb75;
 
 
 
-@media only screen and (min-width:1024px ){
-  .wrapper{
-    width: 87%;
-    margin-top: -35px;
-  }
+
 
   .img-area{
     width: 150px;
