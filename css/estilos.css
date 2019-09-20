@@ -4,9 +4,6 @@ background:#758ccb;
 }
 
 
-.testimonial-carousel{
-  margin:5% auto 0;
-}
 
 .img-area{
   width: 200px;
@@ -70,6 +67,7 @@ color: #b7cb75;
     padding-bottom:450px;
     position:relative;
     height:100%;
+   
 }
 .map-responsive iframe{
     left:0;
@@ -101,7 +99,7 @@ color: #b7cb75;
 @media only screen and (min-width:768px ) and (max-width: 991px){
   .wrapper{
     width: 87%;
-  }
+   }
 
   .img-area{
     width: 150px;
@@ -143,9 +141,10 @@ color: #b7cb75;
   .img-text p{
     font-size: 14px;
   }
- @media only screen and(max-width: 320px){
+ @media only screen and(min-width: 320px){
    .wrapper{
     width: 71%
+    
    }
   }
 }
