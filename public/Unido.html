@@ -256,7 +256,7 @@
                                             <h3 class="tema my-auto font-weight-bolder">Tema 1. Expediente Clínico</h3>
                                         </div>
                                         <div class="col-sm-4 mx-0 my-1">
-                                            <div class="p-1 ml-md-auto estadoF">Finalizado</div>
+                                            <div id="estado1" class="p-1 ml-md-auto estadoF">Finalizado</div>
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                                                 Calidad</h3>
                                         </div>
                                         <div class="col-sm-4 mx-0 my-1">
-                                            <div class="p-1 ml-md-auto estadoF">Finalizado</div>
+                                            <div id="estado2" class="p-1 ml-md-auto estadoF">Finalizado</div>
                                         </div>
                                     </div>
                                 </div>
@@ -370,7 +370,7 @@
                                                 Seguridad del Paciente</h3>
                                         </div>
                                         <div class="col-sm-4 mx-0 my-1">
-                                            <div class="p-1 ml-md-auto estadoF">Finalizado</div>
+                                            <div id="estado3" class="p-1 ml-md-auto estadoF">Finalizado</div>
                                         </div>
                                     </div>
                                 </div>
@@ -425,7 +425,7 @@
                                             <h3 class="tema my-auto font-weight-bolder">Tema 4. Aval Ciudadano</h3>
                                         </div>
                                         <div class="col-sm-4 mx-0 my-1">
-                                            <div class="p-1 ml-md-auto estadoC">En curso</div>
+                                            <div id="estado4" class="p-1 ml-md-auto estadoF">En curso</div>
                                         </div>
                                     </div>
                                 </div>
@@ -468,7 +468,7 @@
                                                 Atención Segura</h3>
                                         </div>
                                         <div class="col-sm-4 mx-0 my-1">
-                                            <div class="p-1 ml-md-auto estadoP">Próximo</div>
+                                            <div id="estado5" class="p-1 ml-md-auto estadoF">Próximo</div>
                                         </div>
                                     </div>
                                 </div>
@@ -669,24 +669,94 @@
     <script type="text/javascript" src="../js/inicio.js"></script>
     <script src="../js/owl.carousel.js"></script>
     <script >
-        
-            $('.testimonial-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                autoplay:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:3
-                    }
+        var Hra = setInterval(Timer, 1000);
+    
+        function Timer(){
+            fecha = new Date();
+            hora = fecha.getHours();
+            minutos = fecha.getMinutes();
+            segundos = fecha.getSeconds();
+            dia = fecha.getDate();
+
+            if (segundos === 59){
+                FtoP();
+            }
+            if (segundos === 19) {
+                PtoC();
+            }
+            if (segundos === 39) {
+                CtoF();
+            }
+        }
+
+        function FtoP(){
+            $('#estado1').removeClass("estadoF");
+            $('#estado1').addClass("estadoP");
+
+            $('#estado2').removeClass("estadoF");
+            $('#estado2').addClass("estadoP");
+
+            $('#estado3').removeClass("estadoF");
+            $('#estado3').addClass("estadoP");
+
+            $('#estado4').removeClass("estadoF");
+            $('#estado4').addClass("estadoP");
+
+            $('#estado5').removeClass("estadoF");
+            $('#estado5').addClass("estadoP");
+        }
+
+        function PtoC(){
+            $('#estado1').removeClass("estadoP");
+            $('#estado1').addClass("estadoC");
+
+            $('#estado2').removeClass("estadoP");
+            $('#estado2').addClass("estadoC");
+
+            $('#estado3').removeClass("estadoP");
+            $('#estado3').addClass("estadoC");
+
+            $('#estado4').removeClass("estadoP");
+            $('#estado4').addClass("estadoC");
+
+            $('#estado5').removeClass("estadoP");
+            $('#estado5').addClass("estadoC");
+        }
+
+        function CtoF(){
+            $('#estado1').removeClass("estadoC");
+            $('#estado1').addClass("estadoF");
+
+            $('#estado2').removeClass("estadoC");
+            $('#estado2').addClass("estadoF");
+
+            $('#estado3').removeClass("estadoC");
+            $('#estado3').addClass("estadoF");
+
+            $('#estado4').removeClass("estadoC");
+            $('#estado4').addClass("estadoF");
+
+            $('#estado5').removeClass("estadoC");
+            $('#estado5').addClass("estadoF");
+        }
+            
+        $('.testimonial-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
                 }
-            })
+            }
+        });
     </script>
     
 </body>
