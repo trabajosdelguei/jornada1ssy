@@ -1,8 +1,8 @@
 <?php 
 $usuario = "root";
-$contraseña= "";
+$contraseña= "29072011";
 $servidor= "localhost";
-$basededatos= "jornadassy";
+$basededatos= "Ssy";
 
 $conexion= mysqli_connect($servidor,$usuario,$contraseña) or die("No se ha podido conectar a la BD del Servidor");
 
