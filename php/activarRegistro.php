@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $idval = $_GET['id'];
     $email = $_GET['email'];
 
-    $query = "UPDATE inscritos SET confimacion = '1' WHERE id = '$idval' AND email ='$email'";
+    $query = "UPDATE inscripcion SET confimacion = '1' WHERE id = '$idval' AND email ='$email'";
     mysqli_query($conexion,$query) or die(mysql_error());
 ?>
 <SCRIPT LANGUAGE="javascript">
