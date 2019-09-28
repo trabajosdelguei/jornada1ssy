@@ -37,7 +37,7 @@
                         // En data puedes utilizar un objeto JSON, un array o un query string
                         data: dataForm,
                         type: "POST",
-                        url: "http://localhost/php/inscribir.php",
+                        url: "http://localhost/jornada1ssy/php/inscribir.php",
                     })
                     .done(function( data, textStatus, jqXHR ) {
                         if ( console && console.log ) {
