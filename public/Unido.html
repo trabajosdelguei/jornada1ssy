@@ -455,49 +455,18 @@
 
             <div class="hueco" id="slider"></div>
             <div class="wrapper mx-5">
-                <div class="testimonial-carousel section-padding owl-carousel owl-theme">
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/codamedy_logo.jpg" alt="CODAMEDY">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/hraepy_logo.png" alt="HRAEPY">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/imss_logo.png" alt="IMSS">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/ISSSTE_logo.png" alt="ISSSTE">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/logossy.jpg" alt="SSY">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/semar_logo.png" alt="SEMAR">
-                        </div>
-                    </div>
-
-                    <div class="single-testi">
-                        <div class="img-area">
-                            <img src="../images/uady_enfermeria.jpg" alt="UADY Facultad de Enfermería">
-                        </div>
-                    </div>
+                <div class="customer-logos">
+                  <div class="slide"><img src="../images/descarga.png"></div>
+                  <div class="slide"><img src="../images/imss.jpg"></div>
+                  <div class="slide"><img src="../images/semar.png"></div>
+                  <div class="slide"><img src="../images/Secretariasalud.png"></div>
+                  <div class="slide"><img src="../images/codamedy.jpg"></div>
+                  <div class="slide"><img src="../images/uady.png"></div>
+                  <div class="slide"><img src="../images/hraepy.png"></div>
+                  <div class="slide"><img src="../images/hospital_militar.jpg"></div>
+                  <div class="slide"><img src="../images/anahuac.png"></div>
                 </div>
+
             </div>
 
             <div class="hueco" id="ubicacion"></div>
@@ -515,7 +484,7 @@
         <div class="footer container-fluid my-0 px-3">
             <div class="row mx-1 my-2">
                 <div class="col-12 col-sm-8 col-md-6 my-2 text-wrap">
-                    <h4>Comité de Calidad del Estado de Yucatán</h4>
+                    <h4>Comité de Calidad en Salud del Estado de Yucatán</h4>
                     Oficinas administrativas:<br>
                     <span class="font-weight-bolder">Dirección:</span> Calle 72 #463 por 53 y 55 Col. Centro. Mérida,
                     Yucatán<br>
@@ -565,6 +534,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/inicio.js"></script>
     <script src="../js/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script >
         var Hra = setInterval(Timer, 1000);
     
@@ -652,23 +622,29 @@
             $('#estado5').text("Finalizado");
         }
             
-        $('.testimonial-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            autoplay:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:3
-                }
-            }
-        });
+         $(document).ready(function(){
+                          $('.customer-logos').slick({
+                            slidesToShow: 6,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 1000,
+                            arrows: false,
+                            dots: false,
+                            pauseOnHover: false,
+                            responsive: [{
+                              breakpoint: 768,
+                              settings: {
+                                slidesToShow: 4
+                              }
+                            }, {
+                              breakpoint: 520,
+                              settings: {
+                                slidesToShow: 3
+                              }
+                            }]
+                          });
+                        });
+
     </script>
     
 </body>
