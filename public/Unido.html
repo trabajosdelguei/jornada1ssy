@@ -463,6 +463,8 @@
                   <div class="slide"><img src="../images/codamedy.jpg"></div>
                   <div class="slide"><img src="../images/uady.png"></div>
                   <div class="slide"><img src="../images/hraepy.png"></div>
+                  <div class="slide"><img src="../images/hospital_militar.jpg"></div>
+                  <div class="slide"><img src="../images/anahuac.png"></div>
                 </div>
 
             </div>
@@ -482,7 +484,7 @@
         <div class="footer container-fluid my-0 px-3">
             <div class="row mx-1 my-2">
                 <div class="col-12 col-sm-8 col-md-6 my-2 text-wrap">
-                    <h4>Comité de Calidad del Estado de Yucatán</h4>
+                    <h4>Comité de Calidad en Salud del Estado de Yucatán</h4>
                     Oficinas administrativas:<br>
                     <span class="font-weight-bolder">Dirección:</span> Calle 72 #463 por 53 y 55 Col. Centro. Mérida,
                     Yucatán<br>
@@ -557,52 +559,67 @@
         function FtoP(){
             $('#estado1').removeClass("estadoF");
             $('#estado1').addClass("estadoP");
+            $('#estado1').text("Próximo");
 
             $('#estado2').removeClass("estadoF");
             $('#estado2').addClass("estadoP");
+            $('#estado2').text("Próximo");
 
             $('#estado3').removeClass("estadoF");
             $('#estado3').addClass("estadoP");
+            $('#estado3').text("Próximo");
 
             $('#estado4').removeClass("estadoF");
             $('#estado4').addClass("estadoP");
+            $('#estado4').text("Próximo");
 
             $('#estado5').removeClass("estadoF");
             $('#estado5').addClass("estadoP");
+            $('#estado5').text("Próximo");
         }
 
         function PtoC(){
             $('#estado1').removeClass("estadoP");
             $('#estado1').addClass("estadoC");
+            $('#estado1').text("En Curso");
 
             $('#estado2').removeClass("estadoP");
             $('#estado2').addClass("estadoC");
+            $('#estado2').text("En Curso");
 
             $('#estado3').removeClass("estadoP");
             $('#estado3').addClass("estadoC");
+            $('#estado3').text("En Curso");
 
             $('#estado4').removeClass("estadoP");
             $('#estado4').addClass("estadoC");
+            $('#estado4').text("En Curso");
 
             $('#estado5').removeClass("estadoP");
             $('#estado5').addClass("estadoC");
+            $('#estado5').text("En Curso");
         }
 
         function CtoF(){
             $('#estado1').removeClass("estadoC");
             $('#estado1').addClass("estadoF");
+            $('#estado1').text("Finalizado");
 
             $('#estado2').removeClass("estadoC");
             $('#estado2').addClass("estadoF");
+            $('#estado2').text("Finalizado");
 
             $('#estado3').removeClass("estadoC");
             $('#estado3').addClass("estadoF");
+            $('#estado3').text("Finalizado");
 
             $('#estado4').removeClass("estadoC");
             $('#estado4').addClass("estadoF");
+            $('#estado4').text("Finalizado");
 
             $('#estado5').removeClass("estadoC");
             $('#estado5').addClass("estadoF");
+            $('#estado5').text("Finalizado");
         }
             
          $(document).ready(function(){
