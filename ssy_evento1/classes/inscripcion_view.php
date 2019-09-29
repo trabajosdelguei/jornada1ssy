@@ -708,10 +708,9 @@ class inscripcion_view extends inscripcion
 		$this->setupExportOptions();
 		$this->idinscripcion->setVisibility();
 		$this->nombre->setVisibility();
-		$this->apellido->setVisibility();
-		$this->e_mail->setVisibility();
 		$this->institucion->setVisibility();
 		$this->rfc->setVisibility();
+		$this->_email->setVisibility();
 		$this->hideFieldsForAddEdit();
 
 		// Do not use lookup cache
@@ -966,10 +965,9 @@ class inscripcion_view extends inscripcion
 			return;
 		$this->idinscripcion->setDbValue($row['idinscripcion']);
 		$this->nombre->setDbValue($row['nombre']);
-		$this->apellido->setDbValue($row['apellido']);
-		$this->e_mail->setDbValue($row['e-mail']);
 		$this->institucion->setDbValue($row['institucion']);
 		$this->rfc->setDbValue($row['rfc']);
+		$this->_email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -978,10 +976,9 @@ class inscripcion_view extends inscripcion
 		$row = [];
 		$row['idinscripcion'] = NULL;
 		$row['nombre'] = NULL;
-		$row['apellido'] = NULL;
-		$row['e-mail'] = NULL;
 		$row['institucion'] = NULL;
 		$row['rfc'] = NULL;
+		$row['email'] = NULL;
 		return $row;
 	}
 
@@ -1004,10 +1001,9 @@ class inscripcion_view extends inscripcion
 		// Common render codes for all row types
 		// idinscripcion
 		// nombre
-		// apellido
-		// e-mail
 		// institucion
 		// rfc
+		// email
 
 		if ($this->RowType == ROWTYPE_VIEW) { // View row
 
@@ -1019,14 +1015,6 @@ class inscripcion_view extends inscripcion
 			$this->nombre->ViewValue = $this->nombre->CurrentValue;
 			$this->nombre->ViewCustomAttributes = "";
 
-			// apellido
-			$this->apellido->ViewValue = $this->apellido->CurrentValue;
-			$this->apellido->ViewCustomAttributes = "";
-
-			// e-mail
-			$this->e_mail->ViewValue = $this->e_mail->CurrentValue;
-			$this->e_mail->ViewCustomAttributes = "";
-
 			// institucion
 			$this->institucion->ViewValue = $this->institucion->CurrentValue;
 			$this->institucion->ViewCustomAttributes = "";
@@ -1034,6 +1022,10 @@ class inscripcion_view extends inscripcion
 			// rfc
 			$this->rfc->ViewValue = $this->rfc->CurrentValue;
 			$this->rfc->ViewCustomAttributes = "";
+
+			// email
+			$this->_email->ViewValue = $this->_email->CurrentValue;
+			$this->_email->ViewCustomAttributes = "";
 
 			// idinscripcion
 			$this->idinscripcion->LinkCustomAttributes = "";
@@ -1045,16 +1037,6 @@ class inscripcion_view extends inscripcion
 			$this->nombre->HrefValue = "";
 			$this->nombre->TooltipValue = "";
 
-			// apellido
-			$this->apellido->LinkCustomAttributes = "";
-			$this->apellido->HrefValue = "";
-			$this->apellido->TooltipValue = "";
-
-			// e-mail
-			$this->e_mail->LinkCustomAttributes = "";
-			$this->e_mail->HrefValue = "";
-			$this->e_mail->TooltipValue = "";
-
 			// institucion
 			$this->institucion->LinkCustomAttributes = "";
 			$this->institucion->HrefValue = "";
@@ -1064,6 +1046,11 @@ class inscripcion_view extends inscripcion
 			$this->rfc->LinkCustomAttributes = "";
 			$this->rfc->HrefValue = "";
 			$this->rfc->TooltipValue = "";
+
+			// email
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
+			$this->_email->TooltipValue = "";
 		}
 
 		// Call Row Rendered event

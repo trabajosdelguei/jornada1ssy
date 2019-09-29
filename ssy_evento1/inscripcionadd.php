@@ -59,16 +59,6 @@ finscripcionadd.validate = function() {
 			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
 				return this.onError(elm, "<?php echo JsEncode(str_replace("%s", $inscripcion->nombre->caption(), $inscripcion->nombre->RequiredErrorMessage)) ?>");
 		<?php } ?>
-		<?php if ($inscripcion_add->apellido->Required) { ?>
-			elm = this.getElements("x" + infix + "_apellido");
-			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
-				return this.onError(elm, "<?php echo JsEncode(str_replace("%s", $inscripcion->apellido->caption(), $inscripcion->apellido->RequiredErrorMessage)) ?>");
-		<?php } ?>
-		<?php if ($inscripcion_add->e_mail->Required) { ?>
-			elm = this.getElements("x" + infix + "_e_mail");
-			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
-				return this.onError(elm, "<?php echo JsEncode(str_replace("%s", $inscripcion->e_mail->caption(), $inscripcion->e_mail->RequiredErrorMessage)) ?>");
-		<?php } ?>
 		<?php if ($inscripcion_add->institucion->Required) { ?>
 			elm = this.getElements("x" + infix + "_institucion");
 			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
@@ -78,6 +68,11 @@ finscripcionadd.validate = function() {
 			elm = this.getElements("x" + infix + "_rfc");
 			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
 				return this.onError(elm, "<?php echo JsEncode(str_replace("%s", $inscripcion->rfc->caption(), $inscripcion->rfc->RequiredErrorMessage)) ?>");
+		<?php } ?>
+		<?php if ($inscripcion_add->_email->Required) { ?>
+			elm = this.getElements("x" + infix + "__email");
+			if (elm && !ew.isHidden(elm) && !ew.hasValue(elm))
+				return this.onError(elm, "<?php echo JsEncode(str_replace("%s", $inscripcion->_email->caption(), $inscripcion->_email->RequiredErrorMessage)) ?>");
 		<?php } ?>
 
 			// Fire Form_CustomValidate event
@@ -136,26 +131,6 @@ $inscripcion_add->showMessage();
 <?php echo $inscripcion->nombre->CustomMsg ?></div></div>
 	</div>
 <?php } ?>
-<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-	<div id="r_apellido" class="form-group row">
-		<label id="elh_inscripcion_apellido" for="x_apellido" class="<?php echo $inscripcion_add->LeftColumnClass ?>"><?php echo $inscripcion->apellido->caption() ?><?php echo ($inscripcion->apellido->Required) ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
-		<div class="<?php echo $inscripcion_add->RightColumnClass ?>"><div<?php echo $inscripcion->apellido->cellAttributes() ?>>
-<span id="el_inscripcion_apellido">
-<input type="text" data-table="inscripcion" data-field="x_apellido" name="x_apellido" id="x_apellido" size="30" maxlength="45" placeholder="<?php echo HtmlEncode($inscripcion->apellido->getPlaceHolder()) ?>" value="<?php echo $inscripcion->apellido->EditValue ?>"<?php echo $inscripcion->apellido->editAttributes() ?>>
-</span>
-<?php echo $inscripcion->apellido->CustomMsg ?></div></div>
-	</div>
-<?php } ?>
-<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-	<div id="r_e_mail" class="form-group row">
-		<label id="elh_inscripcion_e_mail" for="x_e_mail" class="<?php echo $inscripcion_add->LeftColumnClass ?>"><?php echo $inscripcion->e_mail->caption() ?><?php echo ($inscripcion->e_mail->Required) ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
-		<div class="<?php echo $inscripcion_add->RightColumnClass ?>"><div<?php echo $inscripcion->e_mail->cellAttributes() ?>>
-<span id="el_inscripcion_e_mail">
-<input type="text" data-table="inscripcion" data-field="x_e_mail" name="x_e_mail" id="x_e_mail" size="30" maxlength="45" placeholder="<?php echo HtmlEncode($inscripcion->e_mail->getPlaceHolder()) ?>" value="<?php echo $inscripcion->e_mail->EditValue ?>"<?php echo $inscripcion->e_mail->editAttributes() ?>>
-</span>
-<?php echo $inscripcion->e_mail->CustomMsg ?></div></div>
-	</div>
-<?php } ?>
 <?php if ($inscripcion->institucion->Visible) { // institucion ?>
 	<div id="r_institucion" class="form-group row">
 		<label id="elh_inscripcion_institucion" for="x_institucion" class="<?php echo $inscripcion_add->LeftColumnClass ?>"><?php echo $inscripcion->institucion->caption() ?><?php echo ($inscripcion->institucion->Required) ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
@@ -174,6 +149,16 @@ $inscripcion_add->showMessage();
 <input type="text" data-table="inscripcion" data-field="x_rfc" name="x_rfc" id="x_rfc" size="30" maxlength="45" placeholder="<?php echo HtmlEncode($inscripcion->rfc->getPlaceHolder()) ?>" value="<?php echo $inscripcion->rfc->EditValue ?>"<?php echo $inscripcion->rfc->editAttributes() ?>>
 </span>
 <?php echo $inscripcion->rfc->CustomMsg ?></div></div>
+	</div>
+<?php } ?>
+<?php if ($inscripcion->_email->Visible) { // email ?>
+	<div id="r__email" class="form-group row">
+		<label id="elh_inscripcion__email" for="x__email" class="<?php echo $inscripcion_add->LeftColumnClass ?>"><?php echo $inscripcion->_email->caption() ?><?php echo ($inscripcion->_email->Required) ? $Language->phrase("FieldRequiredIndicator") : "" ?></label>
+		<div class="<?php echo $inscripcion_add->RightColumnClass ?>"><div<?php echo $inscripcion->_email->cellAttributes() ?>>
+<span id="el_inscripcion__email">
+<input type="text" data-table="inscripcion" data-field="x__email" name="x__email" id="x__email" size="30" maxlength="45" placeholder="<?php echo HtmlEncode($inscripcion->_email->getPlaceHolder()) ?>" value="<?php echo $inscripcion->_email->EditValue ?>"<?php echo $inscripcion->_email->editAttributes() ?>>
+</span>
+<?php echo $inscripcion->_email->CustomMsg ?></div></div>
 	</div>
 <?php } ?>
 </div><!-- /page* -->

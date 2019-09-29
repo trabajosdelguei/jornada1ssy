@@ -82,17 +82,14 @@ $inscripcion_delete->showMessage();
 <?php if ($inscripcion->nombre->Visible) { // nombre ?>
 		<th class="<?php echo $inscripcion->nombre->headerCellClass() ?>"><span id="elh_inscripcion_nombre" class="inscripcion_nombre"><?php echo $inscripcion->nombre->caption() ?></span></th>
 <?php } ?>
-<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-		<th class="<?php echo $inscripcion->apellido->headerCellClass() ?>"><span id="elh_inscripcion_apellido" class="inscripcion_apellido"><?php echo $inscripcion->apellido->caption() ?></span></th>
-<?php } ?>
-<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-		<th class="<?php echo $inscripcion->e_mail->headerCellClass() ?>"><span id="elh_inscripcion_e_mail" class="inscripcion_e_mail"><?php echo $inscripcion->e_mail->caption() ?></span></th>
-<?php } ?>
 <?php if ($inscripcion->institucion->Visible) { // institucion ?>
 		<th class="<?php echo $inscripcion->institucion->headerCellClass() ?>"><span id="elh_inscripcion_institucion" class="inscripcion_institucion"><?php echo $inscripcion->institucion->caption() ?></span></th>
 <?php } ?>
 <?php if ($inscripcion->rfc->Visible) { // rfc ?>
 		<th class="<?php echo $inscripcion->rfc->headerCellClass() ?>"><span id="elh_inscripcion_rfc" class="inscripcion_rfc"><?php echo $inscripcion->rfc->caption() ?></span></th>
+<?php } ?>
+<?php if ($inscripcion->_email->Visible) { // email ?>
+		<th class="<?php echo $inscripcion->_email->headerCellClass() ?>"><span id="elh_inscripcion__email" class="inscripcion__email"><?php echo $inscripcion->_email->caption() ?></span></th>
 <?php } ?>
 	</tr>
 	</thead>
@@ -131,22 +128,6 @@ while (!$inscripcion_delete->Recordset->EOF) {
 </span>
 </td>
 <?php } ?>
-<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-		<td<?php echo $inscripcion->apellido->cellAttributes() ?>>
-<span id="el<?php echo $inscripcion_delete->RowCnt ?>_inscripcion_apellido" class="inscripcion_apellido">
-<span<?php echo $inscripcion->apellido->viewAttributes() ?>>
-<?php echo $inscripcion->apellido->getViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
-<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-		<td<?php echo $inscripcion->e_mail->cellAttributes() ?>>
-<span id="el<?php echo $inscripcion_delete->RowCnt ?>_inscripcion_e_mail" class="inscripcion_e_mail">
-<span<?php echo $inscripcion->e_mail->viewAttributes() ?>>
-<?php echo $inscripcion->e_mail->getViewValue() ?></span>
-</span>
-</td>
-<?php } ?>
 <?php if ($inscripcion->institucion->Visible) { // institucion ?>
 		<td<?php echo $inscripcion->institucion->cellAttributes() ?>>
 <span id="el<?php echo $inscripcion_delete->RowCnt ?>_inscripcion_institucion" class="inscripcion_institucion">
@@ -160,6 +141,14 @@ while (!$inscripcion_delete->Recordset->EOF) {
 <span id="el<?php echo $inscripcion_delete->RowCnt ?>_inscripcion_rfc" class="inscripcion_rfc">
 <span<?php echo $inscripcion->rfc->viewAttributes() ?>>
 <?php echo $inscripcion->rfc->getViewValue() ?></span>
+</span>
+</td>
+<?php } ?>
+<?php if ($inscripcion->_email->Visible) { // email ?>
+		<td<?php echo $inscripcion->_email->cellAttributes() ?>>
+<span id="el<?php echo $inscripcion_delete->RowCnt ?>_inscripcion__email" class="inscripcion__email">
+<span<?php echo $inscripcion->_email->viewAttributes() ?>>
+<?php echo $inscripcion->_email->getViewValue() ?></span>
 </span>
 </td>
 <?php } ?>

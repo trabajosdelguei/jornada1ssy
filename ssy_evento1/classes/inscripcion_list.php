@@ -709,10 +709,9 @@ class inscripcion_list extends inscripcion
 		$this->setupListOptions();
 		$this->idinscripcion->setVisibility();
 		$this->nombre->setVisibility();
-		$this->apellido->setVisibility();
-		$this->e_mail->setVisibility();
 		$this->institucion->setVisibility();
 		$this->rfc->setVisibility();
+		$this->_email->setVisibility();
 		$this->hideFieldsForAddEdit();
 
 		// Global Page Loading event (in userfn*.php)
@@ -961,10 +960,9 @@ class inscripcion_list extends inscripcion
 		$savedFilterList = "";
 		$filterList = Concat($filterList, $this->idinscripcion->AdvancedSearch->toJson(), ","); // Field idinscripcion
 		$filterList = Concat($filterList, $this->nombre->AdvancedSearch->toJson(), ","); // Field nombre
-		$filterList = Concat($filterList, $this->apellido->AdvancedSearch->toJson(), ","); // Field apellido
-		$filterList = Concat($filterList, $this->e_mail->AdvancedSearch->toJson(), ","); // Field e-mail
 		$filterList = Concat($filterList, $this->institucion->AdvancedSearch->toJson(), ","); // Field institucion
 		$filterList = Concat($filterList, $this->rfc->AdvancedSearch->toJson(), ","); // Field rfc
+		$filterList = Concat($filterList, $this->_email->AdvancedSearch->toJson(), ","); // Field email
 		if ($this->BasicSearch->Keyword <> "") {
 			$wrk = "\"" . TABLE_BASIC_SEARCH . "\":\"" . JsEncode($this->BasicSearch->Keyword) . "\",\"" . TABLE_BASIC_SEARCH_TYPE . "\":\"" . JsEncode($this->BasicSearch->Type) . "\"";
 			$filterList = Concat($filterList, $wrk, ",");
@@ -1019,22 +1017,6 @@ class inscripcion_list extends inscripcion
 		$this->nombre->AdvancedSearch->SearchOperator2 = @$filter["w_nombre"];
 		$this->nombre->AdvancedSearch->save();
 
-		// Field apellido
-		$this->apellido->AdvancedSearch->SearchValue = @$filter["x_apellido"];
-		$this->apellido->AdvancedSearch->SearchOperator = @$filter["z_apellido"];
-		$this->apellido->AdvancedSearch->SearchCondition = @$filter["v_apellido"];
-		$this->apellido->AdvancedSearch->SearchValue2 = @$filter["y_apellido"];
-		$this->apellido->AdvancedSearch->SearchOperator2 = @$filter["w_apellido"];
-		$this->apellido->AdvancedSearch->save();
-
-		// Field e-mail
-		$this->e_mail->AdvancedSearch->SearchValue = @$filter["x_e_mail"];
-		$this->e_mail->AdvancedSearch->SearchOperator = @$filter["z_e_mail"];
-		$this->e_mail->AdvancedSearch->SearchCondition = @$filter["v_e_mail"];
-		$this->e_mail->AdvancedSearch->SearchValue2 = @$filter["y_e_mail"];
-		$this->e_mail->AdvancedSearch->SearchOperator2 = @$filter["w_e_mail"];
-		$this->e_mail->AdvancedSearch->save();
-
 		// Field institucion
 		$this->institucion->AdvancedSearch->SearchValue = @$filter["x_institucion"];
 		$this->institucion->AdvancedSearch->SearchOperator = @$filter["z_institucion"];
@@ -1050,6 +1032,14 @@ class inscripcion_list extends inscripcion
 		$this->rfc->AdvancedSearch->SearchValue2 = @$filter["y_rfc"];
 		$this->rfc->AdvancedSearch->SearchOperator2 = @$filter["w_rfc"];
 		$this->rfc->AdvancedSearch->save();
+
+		// Field email
+		$this->_email->AdvancedSearch->SearchValue = @$filter["x__email"];
+		$this->_email->AdvancedSearch->SearchOperator = @$filter["z__email"];
+		$this->_email->AdvancedSearch->SearchCondition = @$filter["v__email"];
+		$this->_email->AdvancedSearch->SearchValue2 = @$filter["y__email"];
+		$this->_email->AdvancedSearch->SearchOperator2 = @$filter["w__email"];
+		$this->_email->AdvancedSearch->save();
 		$this->BasicSearch->setKeyword(@$filter[TABLE_BASIC_SEARCH]);
 		$this->BasicSearch->setType(@$filter[TABLE_BASIC_SEARCH_TYPE]);
 	}
@@ -1059,10 +1049,9 @@ class inscripcion_list extends inscripcion
 	{
 		$where = "";
 		$this->buildBasicSearchSql($where, $this->nombre, $arKeywords, $type);
-		$this->buildBasicSearchSql($where, $this->apellido, $arKeywords, $type);
-		$this->buildBasicSearchSql($where, $this->e_mail, $arKeywords, $type);
 		$this->buildBasicSearchSql($where, $this->institucion, $arKeywords, $type);
 		$this->buildBasicSearchSql($where, $this->rfc, $arKeywords, $type);
+		$this->buildBasicSearchSql($where, $this->_email, $arKeywords, $type);
 		return $where;
 	}
 
@@ -1224,10 +1213,9 @@ class inscripcion_list extends inscripcion
 			$this->CurrentOrderType = Get("ordertype", "");
 			$this->updateSort($this->idinscripcion); // idinscripcion
 			$this->updateSort($this->nombre); // nombre
-			$this->updateSort($this->apellido); // apellido
-			$this->updateSort($this->e_mail); // e-mail
 			$this->updateSort($this->institucion); // institucion
 			$this->updateSort($this->rfc); // rfc
+			$this->updateSort($this->_email); // email
 			$this->setStartRecordNumber(1); // Reset start position
 		}
 	}
@@ -1265,10 +1253,9 @@ class inscripcion_list extends inscripcion
 				$this->setSessionOrderBy($orderBy);
 				$this->idinscripcion->setSort("");
 				$this->nombre->setSort("");
-				$this->apellido->setSort("");
-				$this->e_mail->setSort("");
 				$this->institucion->setSort("");
 				$this->rfc->setSort("");
+				$this->_email->setSort("");
 			}
 
 			// Reset start position
@@ -1728,10 +1715,9 @@ class inscripcion_list extends inscripcion
 			return;
 		$this->idinscripcion->setDbValue($row['idinscripcion']);
 		$this->nombre->setDbValue($row['nombre']);
-		$this->apellido->setDbValue($row['apellido']);
-		$this->e_mail->setDbValue($row['e-mail']);
 		$this->institucion->setDbValue($row['institucion']);
 		$this->rfc->setDbValue($row['rfc']);
+		$this->_email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -1740,10 +1726,9 @@ class inscripcion_list extends inscripcion
 		$row = [];
 		$row['idinscripcion'] = NULL;
 		$row['nombre'] = NULL;
-		$row['apellido'] = NULL;
-		$row['e-mail'] = NULL;
 		$row['institucion'] = NULL;
 		$row['rfc'] = NULL;
+		$row['email'] = NULL;
 		return $row;
 	}
 
@@ -1789,10 +1774,9 @@ class inscripcion_list extends inscripcion
 		// Common render codes for all row types
 		// idinscripcion
 		// nombre
-		// apellido
-		// e-mail
 		// institucion
 		// rfc
+		// email
 
 		if ($this->RowType == ROWTYPE_VIEW) { // View row
 
@@ -1804,14 +1788,6 @@ class inscripcion_list extends inscripcion
 			$this->nombre->ViewValue = $this->nombre->CurrentValue;
 			$this->nombre->ViewCustomAttributes = "";
 
-			// apellido
-			$this->apellido->ViewValue = $this->apellido->CurrentValue;
-			$this->apellido->ViewCustomAttributes = "";
-
-			// e-mail
-			$this->e_mail->ViewValue = $this->e_mail->CurrentValue;
-			$this->e_mail->ViewCustomAttributes = "";
-
 			// institucion
 			$this->institucion->ViewValue = $this->institucion->CurrentValue;
 			$this->institucion->ViewCustomAttributes = "";
@@ -1819,6 +1795,10 @@ class inscripcion_list extends inscripcion
 			// rfc
 			$this->rfc->ViewValue = $this->rfc->CurrentValue;
 			$this->rfc->ViewCustomAttributes = "";
+
+			// email
+			$this->_email->ViewValue = $this->_email->CurrentValue;
+			$this->_email->ViewCustomAttributes = "";
 
 			// idinscripcion
 			$this->idinscripcion->LinkCustomAttributes = "";
@@ -1830,16 +1810,6 @@ class inscripcion_list extends inscripcion
 			$this->nombre->HrefValue = "";
 			$this->nombre->TooltipValue = "";
 
-			// apellido
-			$this->apellido->LinkCustomAttributes = "";
-			$this->apellido->HrefValue = "";
-			$this->apellido->TooltipValue = "";
-
-			// e-mail
-			$this->e_mail->LinkCustomAttributes = "";
-			$this->e_mail->HrefValue = "";
-			$this->e_mail->TooltipValue = "";
-
 			// institucion
 			$this->institucion->LinkCustomAttributes = "";
 			$this->institucion->HrefValue = "";
@@ -1849,6 +1819,11 @@ class inscripcion_list extends inscripcion
 			$this->rfc->LinkCustomAttributes = "";
 			$this->rfc->HrefValue = "";
 			$this->rfc->TooltipValue = "";
+
+			// email
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
+			$this->_email->TooltipValue = "";
 		}
 
 		// Call Row Rendered event

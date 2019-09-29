@@ -604,10 +604,9 @@ class inscripcion_add extends inscripcion
 		$this->CurrentAction = Param("action"); // Set up current action
 		$this->idinscripcion->Visible = FALSE;
 		$this->nombre->setVisibility();
-		$this->apellido->setVisibility();
-		$this->e_mail->setVisibility();
 		$this->institucion->setVisibility();
 		$this->rfc->setVisibility();
+		$this->_email->setVisibility();
 		$this->hideFieldsForAddEdit();
 
 		// Do not use lookup cache
@@ -743,14 +742,12 @@ class inscripcion_add extends inscripcion
 		$this->idinscripcion->OldValue = $this->idinscripcion->CurrentValue;
 		$this->nombre->CurrentValue = NULL;
 		$this->nombre->OldValue = $this->nombre->CurrentValue;
-		$this->apellido->CurrentValue = NULL;
-		$this->apellido->OldValue = $this->apellido->CurrentValue;
-		$this->e_mail->CurrentValue = NULL;
-		$this->e_mail->OldValue = $this->e_mail->CurrentValue;
 		$this->institucion->CurrentValue = NULL;
 		$this->institucion->OldValue = $this->institucion->CurrentValue;
 		$this->rfc->CurrentValue = NULL;
 		$this->rfc->OldValue = $this->rfc->CurrentValue;
+		$this->_email->CurrentValue = NULL;
+		$this->_email->OldValue = $this->_email->CurrentValue;
 	}
 
 	// Load form values
@@ -767,24 +764,6 @@ class inscripcion_add extends inscripcion
 				$this->nombre->Visible = FALSE; // Disable update for API request
 			else
 				$this->nombre->setFormValue($val);
-		}
-
-		// Check field name 'apellido' first before field var 'x_apellido'
-		$val = $CurrentForm->hasValue("apellido") ? $CurrentForm->getValue("apellido") : $CurrentForm->getValue("x_apellido");
-		if (!$this->apellido->IsDetailKey) {
-			if (IsApi() && $val == NULL)
-				$this->apellido->Visible = FALSE; // Disable update for API request
-			else
-				$this->apellido->setFormValue($val);
-		}
-
-		// Check field name 'e-mail' first before field var 'x_e_mail'
-		$val = $CurrentForm->hasValue("e-mail") ? $CurrentForm->getValue("e-mail") : $CurrentForm->getValue("x_e_mail");
-		if (!$this->e_mail->IsDetailKey) {
-			if (IsApi() && $val == NULL)
-				$this->e_mail->Visible = FALSE; // Disable update for API request
-			else
-				$this->e_mail->setFormValue($val);
 		}
 
 		// Check field name 'institucion' first before field var 'x_institucion'
@@ -805,6 +784,15 @@ class inscripcion_add extends inscripcion
 				$this->rfc->setFormValue($val);
 		}
 
+		// Check field name 'email' first before field var 'x__email'
+		$val = $CurrentForm->hasValue("email") ? $CurrentForm->getValue("email") : $CurrentForm->getValue("x__email");
+		if (!$this->_email->IsDetailKey) {
+			if (IsApi() && $val == NULL)
+				$this->_email->Visible = FALSE; // Disable update for API request
+			else
+				$this->_email->setFormValue($val);
+		}
+
 		// Check field name 'idinscripcion' first before field var 'x_idinscripcion'
 		$val = $CurrentForm->hasValue("idinscripcion") ? $CurrentForm->getValue("idinscripcion") : $CurrentForm->getValue("x_idinscripcion");
 	}
@@ -814,10 +802,9 @@ class inscripcion_add extends inscripcion
 	{
 		global $CurrentForm;
 		$this->nombre->CurrentValue = $this->nombre->FormValue;
-		$this->apellido->CurrentValue = $this->apellido->FormValue;
-		$this->e_mail->CurrentValue = $this->e_mail->FormValue;
 		$this->institucion->CurrentValue = $this->institucion->FormValue;
 		$this->rfc->CurrentValue = $this->rfc->FormValue;
+		$this->_email->CurrentValue = $this->_email->FormValue;
 	}
 
 	// Load row based on key values
@@ -857,10 +844,9 @@ class inscripcion_add extends inscripcion
 			return;
 		$this->idinscripcion->setDbValue($row['idinscripcion']);
 		$this->nombre->setDbValue($row['nombre']);
-		$this->apellido->setDbValue($row['apellido']);
-		$this->e_mail->setDbValue($row['e-mail']);
 		$this->institucion->setDbValue($row['institucion']);
 		$this->rfc->setDbValue($row['rfc']);
+		$this->_email->setDbValue($row['email']);
 	}
 
 	// Return a row with default values
@@ -870,10 +856,9 @@ class inscripcion_add extends inscripcion
 		$row = [];
 		$row['idinscripcion'] = $this->idinscripcion->CurrentValue;
 		$row['nombre'] = $this->nombre->CurrentValue;
-		$row['apellido'] = $this->apellido->CurrentValue;
-		$row['e-mail'] = $this->e_mail->CurrentValue;
 		$row['institucion'] = $this->institucion->CurrentValue;
 		$row['rfc'] = $this->rfc->CurrentValue;
+		$row['email'] = $this->_email->CurrentValue;
 		return $row;
 	}
 
@@ -913,10 +898,9 @@ class inscripcion_add extends inscripcion
 		// Common render codes for all row types
 		// idinscripcion
 		// nombre
-		// apellido
-		// e-mail
 		// institucion
 		// rfc
+		// email
 
 		if ($this->RowType == ROWTYPE_VIEW) { // View row
 
@@ -928,14 +912,6 @@ class inscripcion_add extends inscripcion
 			$this->nombre->ViewValue = $this->nombre->CurrentValue;
 			$this->nombre->ViewCustomAttributes = "";
 
-			// apellido
-			$this->apellido->ViewValue = $this->apellido->CurrentValue;
-			$this->apellido->ViewCustomAttributes = "";
-
-			// e-mail
-			$this->e_mail->ViewValue = $this->e_mail->CurrentValue;
-			$this->e_mail->ViewCustomAttributes = "";
-
 			// institucion
 			$this->institucion->ViewValue = $this->institucion->CurrentValue;
 			$this->institucion->ViewCustomAttributes = "";
@@ -944,20 +920,14 @@ class inscripcion_add extends inscripcion
 			$this->rfc->ViewValue = $this->rfc->CurrentValue;
 			$this->rfc->ViewCustomAttributes = "";
 
+			// email
+			$this->_email->ViewValue = $this->_email->CurrentValue;
+			$this->_email->ViewCustomAttributes = "";
+
 			// nombre
 			$this->nombre->LinkCustomAttributes = "";
 			$this->nombre->HrefValue = "";
 			$this->nombre->TooltipValue = "";
-
-			// apellido
-			$this->apellido->LinkCustomAttributes = "";
-			$this->apellido->HrefValue = "";
-			$this->apellido->TooltipValue = "";
-
-			// e-mail
-			$this->e_mail->LinkCustomAttributes = "";
-			$this->e_mail->HrefValue = "";
-			$this->e_mail->TooltipValue = "";
 
 			// institucion
 			$this->institucion->LinkCustomAttributes = "";
@@ -968,6 +938,11 @@ class inscripcion_add extends inscripcion
 			$this->rfc->LinkCustomAttributes = "";
 			$this->rfc->HrefValue = "";
 			$this->rfc->TooltipValue = "";
+
+			// email
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
+			$this->_email->TooltipValue = "";
 		} elseif ($this->RowType == ROWTYPE_ADD) { // Add row
 
 			// nombre
@@ -977,22 +952,6 @@ class inscripcion_add extends inscripcion
 				$this->nombre->CurrentValue = HtmlDecode($this->nombre->CurrentValue);
 			$this->nombre->EditValue = HtmlEncode($this->nombre->CurrentValue);
 			$this->nombre->PlaceHolder = RemoveHtml($this->nombre->caption());
-
-			// apellido
-			$this->apellido->EditAttrs["class"] = "form-control";
-			$this->apellido->EditCustomAttributes = "";
-			if (REMOVE_XSS)
-				$this->apellido->CurrentValue = HtmlDecode($this->apellido->CurrentValue);
-			$this->apellido->EditValue = HtmlEncode($this->apellido->CurrentValue);
-			$this->apellido->PlaceHolder = RemoveHtml($this->apellido->caption());
-
-			// e-mail
-			$this->e_mail->EditAttrs["class"] = "form-control";
-			$this->e_mail->EditCustomAttributes = "";
-			if (REMOVE_XSS)
-				$this->e_mail->CurrentValue = HtmlDecode($this->e_mail->CurrentValue);
-			$this->e_mail->EditValue = HtmlEncode($this->e_mail->CurrentValue);
-			$this->e_mail->PlaceHolder = RemoveHtml($this->e_mail->caption());
 
 			// institucion
 			$this->institucion->EditAttrs["class"] = "form-control";
@@ -1010,19 +969,19 @@ class inscripcion_add extends inscripcion
 			$this->rfc->EditValue = HtmlEncode($this->rfc->CurrentValue);
 			$this->rfc->PlaceHolder = RemoveHtml($this->rfc->caption());
 
+			// email
+			$this->_email->EditAttrs["class"] = "form-control";
+			$this->_email->EditCustomAttributes = "";
+			if (REMOVE_XSS)
+				$this->_email->CurrentValue = HtmlDecode($this->_email->CurrentValue);
+			$this->_email->EditValue = HtmlEncode($this->_email->CurrentValue);
+			$this->_email->PlaceHolder = RemoveHtml($this->_email->caption());
+
 			// Add refer script
 			// nombre
 
 			$this->nombre->LinkCustomAttributes = "";
 			$this->nombre->HrefValue = "";
-
-			// apellido
-			$this->apellido->LinkCustomAttributes = "";
-			$this->apellido->HrefValue = "";
-
-			// e-mail
-			$this->e_mail->LinkCustomAttributes = "";
-			$this->e_mail->HrefValue = "";
 
 			// institucion
 			$this->institucion->LinkCustomAttributes = "";
@@ -1031,6 +990,10 @@ class inscripcion_add extends inscripcion
 			// rfc
 			$this->rfc->LinkCustomAttributes = "";
 			$this->rfc->HrefValue = "";
+
+			// email
+			$this->_email->LinkCustomAttributes = "";
+			$this->_email->HrefValue = "";
 		}
 		if ($this->RowType == ROWTYPE_ADD || $this->RowType == ROWTYPE_EDIT || $this->RowType == ROWTYPE_SEARCH) // Add/Edit/Search row
 			$this->setupFieldTitles();
@@ -1061,16 +1024,6 @@ class inscripcion_add extends inscripcion
 				AddMessage($FormError, str_replace("%s", $this->nombre->caption(), $this->nombre->RequiredErrorMessage));
 			}
 		}
-		if ($this->apellido->Required) {
-			if (!$this->apellido->IsDetailKey && $this->apellido->FormValue != NULL && $this->apellido->FormValue == "") {
-				AddMessage($FormError, str_replace("%s", $this->apellido->caption(), $this->apellido->RequiredErrorMessage));
-			}
-		}
-		if ($this->e_mail->Required) {
-			if (!$this->e_mail->IsDetailKey && $this->e_mail->FormValue != NULL && $this->e_mail->FormValue == "") {
-				AddMessage($FormError, str_replace("%s", $this->e_mail->caption(), $this->e_mail->RequiredErrorMessage));
-			}
-		}
 		if ($this->institucion->Required) {
 			if (!$this->institucion->IsDetailKey && $this->institucion->FormValue != NULL && $this->institucion->FormValue == "") {
 				AddMessage($FormError, str_replace("%s", $this->institucion->caption(), $this->institucion->RequiredErrorMessage));
@@ -1079,6 +1032,11 @@ class inscripcion_add extends inscripcion
 		if ($this->rfc->Required) {
 			if (!$this->rfc->IsDetailKey && $this->rfc->FormValue != NULL && $this->rfc->FormValue == "") {
 				AddMessage($FormError, str_replace("%s", $this->rfc->caption(), $this->rfc->RequiredErrorMessage));
+			}
+		}
+		if ($this->_email->Required) {
+			if (!$this->_email->IsDetailKey && $this->_email->FormValue != NULL && $this->_email->FormValue == "") {
+				AddMessage($FormError, str_replace("%s", $this->_email->caption(), $this->_email->RequiredErrorMessage));
 			}
 		}
 
@@ -1109,17 +1067,14 @@ class inscripcion_add extends inscripcion
 		// nombre
 		$this->nombre->setDbValueDef($rsnew, $this->nombre->CurrentValue, NULL, FALSE);
 
-		// apellido
-		$this->apellido->setDbValueDef($rsnew, $this->apellido->CurrentValue, NULL, FALSE);
-
-		// e-mail
-		$this->e_mail->setDbValueDef($rsnew, $this->e_mail->CurrentValue, NULL, FALSE);
-
 		// institucion
 		$this->institucion->setDbValueDef($rsnew, $this->institucion->CurrentValue, NULL, FALSE);
 
 		// rfc
 		$this->rfc->setDbValueDef($rsnew, $this->rfc->CurrentValue, NULL, FALSE);
+
+		// email
+		$this->_email->setDbValueDef($rsnew, $this->_email->CurrentValue, NULL, FALSE);
 
 		// Call Row Inserting event
 		$rs = ($rsold) ? $rsold->fields : NULL;
