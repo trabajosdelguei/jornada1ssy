@@ -695,7 +695,7 @@
     <!-- v2017 -->
   </global>
   <project>
-    <phrase id="footertext" value=" Derechos Reservatos A: A. May, R. May,H.Ruz." />
+    <phrase id="footertext" value="Derechos Reservados R.May, H.Ruz, A.May;" />
     <menu id="2">
       <phrase id="menutext" value="Inscripción" />
     </menu>
@@ -711,7 +711,7 @@
     <table id="inscripcion">
       <phrase id="tblcaption" value="Inscripción" />
       <field id="idinscripcion">
-        <phrase id="fldcaption" value="N° Inscrito" />
+        <phrase id="fldcaption" value="idinscripcion" />
       </field>
       <field id="nombre">
         <phrase id="fldcaption" value="Nombre" />
@@ -720,10 +720,10 @@
         <phrase id="fldcaption" value="Apellido" />
       </field>
       <field id="e_mail">
-        <phrase id="fldcaption" value="E-mail" />
+        <phrase id="fldcaption" value="Email" />
       </field>
       <field id="institucion">
-        <phrase id="fldcaption" value="Institución" />
+        <phrase id="fldcaption" value="Institucion" />
       </field>
       <field id="rfc">
         <phrase id="fldcaption" value="RFC" />
