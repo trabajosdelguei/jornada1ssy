@@ -2,6 +2,49 @@ html{
 	scroll-behavior: smooth;
 }
 
+
+
+@media (min-width: 319px){
+	.wrapper p{
+	font-size: 25px;
+	font-family: Roboto;
+	text-align: center;
+	color:gray;
+}
+@media (min-width: 576px) { 
+
+.wrapper p{
+	font-size: 35px;
+	font-family: Roboto;
+	text-align: center;
+	color:gray;
+}
+
+
+}
+
+
+@media (min-width: 992px) { 
+.wrapper p{
+	font-size: 35px;
+	font-family: Roboto;
+	text-align: center;
+	color:gray;
+    }
+}
+
+
+
+@media (min-width: 1200px) { 
+.wrapper p{
+	font-size: 40px;
+	font-family: Roboto;
+	text-align: center;
+	color:gray;
+}
+
+}
+
 .slick-slide {
     margin: 0px 20px;
 }
