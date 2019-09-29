@@ -27,10 +27,9 @@ class inscripcion extends DbTable
 	// Fields
 	public $idinscripcion;
 	public $nombre;
-	public $apellido;
-	public $e_mail;
 	public $institucion;
 	public $rfc;
+	public $_email;
 
 	// Constructor
 	public function __construct()
@@ -77,16 +76,6 @@ class inscripcion extends DbTable
 		$this->nombre->Sortable = TRUE; // Allow sort
 		$this->fields['nombre'] = &$this->nombre;
 
-		// apellido
-		$this->apellido = new DbField('inscripcion', 'inscripcion', 'x_apellido', 'apellido', '`apellido`', '`apellido`', 200, -1, FALSE, '`apellido`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->apellido->Sortable = TRUE; // Allow sort
-		$this->fields['apellido'] = &$this->apellido;
-
-		// e-mail
-		$this->e_mail = new DbField('inscripcion', 'inscripcion', 'x_e_mail', 'e-mail', '`e-mail`', '`e-mail`', 200, -1, FALSE, '`e-mail`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->e_mail->Sortable = TRUE; // Allow sort
-		$this->fields['e-mail'] = &$this->e_mail;
-
 		// institucion
 		$this->institucion = new DbField('inscripcion', 'inscripcion', 'x_institucion', 'institucion', '`institucion`', '`institucion`', 200, -1, FALSE, '`institucion`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
 		$this->institucion->Sortable = TRUE; // Allow sort
@@ -96,6 +85,11 @@ class inscripcion extends DbTable
 		$this->rfc = new DbField('inscripcion', 'inscripcion', 'x_rfc', 'rfc', '`rfc`', '`rfc`', 200, -1, FALSE, '`rfc`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
 		$this->rfc->Sortable = TRUE; // Allow sort
 		$this->fields['rfc'] = &$this->rfc;
+
+		// email
+		$this->_email = new DbField('inscripcion', 'inscripcion', 'x__email', 'email', '`email`', '`email`', 200, -1, FALSE, '`email`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
+		$this->_email->Sortable = TRUE; // Allow sort
+		$this->fields['email'] = &$this->_email;
 	}
 
 	// Field Visibility
@@ -440,10 +434,9 @@ class inscripcion extends DbTable
 		$row = is_array($rs) ? $rs : $rs->fields;
 		$this->idinscripcion->DbValue = $row['idinscripcion'];
 		$this->nombre->DbValue = $row['nombre'];
-		$this->apellido->DbValue = $row['apellido'];
-		$this->e_mail->DbValue = $row['e-mail'];
 		$this->institucion->DbValue = $row['institucion'];
 		$this->rfc->DbValue = $row['rfc'];
+		$this->_email->DbValue = $row['email'];
 	}
 
 	// Delete uploaded files
@@ -671,10 +664,9 @@ class inscripcion extends DbTable
 	{
 		$this->idinscripcion->setDbValue($rs->fields('idinscripcion'));
 		$this->nombre->setDbValue($rs->fields('nombre'));
-		$this->apellido->setDbValue($rs->fields('apellido'));
-		$this->e_mail->setDbValue($rs->fields('e-mail'));
 		$this->institucion->setDbValue($rs->fields('institucion'));
 		$this->rfc->setDbValue($rs->fields('rfc'));
+		$this->_email->setDbValue($rs->fields('email'));
 	}
 
 	// Render list row values
@@ -688,10 +680,9 @@ class inscripcion extends DbTable
 		// Common render codes
 		// idinscripcion
 		// nombre
-		// apellido
-		// e-mail
 		// institucion
 		// rfc
+		// email
 		// idinscripcion
 
 		$this->idinscripcion->ViewValue = $this->idinscripcion->CurrentValue;
@@ -701,14 +692,6 @@ class inscripcion extends DbTable
 		$this->nombre->ViewValue = $this->nombre->CurrentValue;
 		$this->nombre->ViewCustomAttributes = "";
 
-		// apellido
-		$this->apellido->ViewValue = $this->apellido->CurrentValue;
-		$this->apellido->ViewCustomAttributes = "";
-
-		// e-mail
-		$this->e_mail->ViewValue = $this->e_mail->CurrentValue;
-		$this->e_mail->ViewCustomAttributes = "";
-
 		// institucion
 		$this->institucion->ViewValue = $this->institucion->CurrentValue;
 		$this->institucion->ViewCustomAttributes = "";
@@ -716,6 +699,10 @@ class inscripcion extends DbTable
 		// rfc
 		$this->rfc->ViewValue = $this->rfc->CurrentValue;
 		$this->rfc->ViewCustomAttributes = "";
+
+		// email
+		$this->_email->ViewValue = $this->_email->CurrentValue;
+		$this->_email->ViewCustomAttributes = "";
 
 		// idinscripcion
 		$this->idinscripcion->LinkCustomAttributes = "";
@@ -727,16 +714,6 @@ class inscripcion extends DbTable
 		$this->nombre->HrefValue = "";
 		$this->nombre->TooltipValue = "";
 
-		// apellido
-		$this->apellido->LinkCustomAttributes = "";
-		$this->apellido->HrefValue = "";
-		$this->apellido->TooltipValue = "";
-
-		// e-mail
-		$this->e_mail->LinkCustomAttributes = "";
-		$this->e_mail->HrefValue = "";
-		$this->e_mail->TooltipValue = "";
-
 		// institucion
 		$this->institucion->LinkCustomAttributes = "";
 		$this->institucion->HrefValue = "";
@@ -746,6 +723,11 @@ class inscripcion extends DbTable
 		$this->rfc->LinkCustomAttributes = "";
 		$this->rfc->HrefValue = "";
 		$this->rfc->TooltipValue = "";
+
+		// email
+		$this->_email->LinkCustomAttributes = "";
+		$this->_email->HrefValue = "";
+		$this->_email->TooltipValue = "";
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -776,22 +758,6 @@ class inscripcion extends DbTable
 		$this->nombre->EditValue = $this->nombre->CurrentValue;
 		$this->nombre->PlaceHolder = RemoveHtml($this->nombre->caption());
 
-		// apellido
-		$this->apellido->EditAttrs["class"] = "form-control";
-		$this->apellido->EditCustomAttributes = "";
-		if (REMOVE_XSS)
-			$this->apellido->CurrentValue = HtmlDecode($this->apellido->CurrentValue);
-		$this->apellido->EditValue = $this->apellido->CurrentValue;
-		$this->apellido->PlaceHolder = RemoveHtml($this->apellido->caption());
-
-		// e-mail
-		$this->e_mail->EditAttrs["class"] = "form-control";
-		$this->e_mail->EditCustomAttributes = "";
-		if (REMOVE_XSS)
-			$this->e_mail->CurrentValue = HtmlDecode($this->e_mail->CurrentValue);
-		$this->e_mail->EditValue = $this->e_mail->CurrentValue;
-		$this->e_mail->PlaceHolder = RemoveHtml($this->e_mail->caption());
-
 		// institucion
 		$this->institucion->EditAttrs["class"] = "form-control";
 		$this->institucion->EditCustomAttributes = "";
@@ -807,6 +773,14 @@ class inscripcion extends DbTable
 			$this->rfc->CurrentValue = HtmlDecode($this->rfc->CurrentValue);
 		$this->rfc->EditValue = $this->rfc->CurrentValue;
 		$this->rfc->PlaceHolder = RemoveHtml($this->rfc->caption());
+
+		// email
+		$this->_email->EditAttrs["class"] = "form-control";
+		$this->_email->EditCustomAttributes = "";
+		if (REMOVE_XSS)
+			$this->_email->CurrentValue = HtmlDecode($this->_email->CurrentValue);
+		$this->_email->EditValue = $this->_email->CurrentValue;
+		$this->_email->PlaceHolder = RemoveHtml($this->_email->caption());
 
 		// Call Row Rendered event
 		$this->Row_Rendered();
@@ -839,17 +813,15 @@ class inscripcion extends DbTable
 				if ($exportPageType == "view") {
 					$doc->exportCaption($this->idinscripcion);
 					$doc->exportCaption($this->nombre);
-					$doc->exportCaption($this->apellido);
-					$doc->exportCaption($this->e_mail);
 					$doc->exportCaption($this->institucion);
 					$doc->exportCaption($this->rfc);
+					$doc->exportCaption($this->_email);
 				} else {
 					$doc->exportCaption($this->idinscripcion);
 					$doc->exportCaption($this->nombre);
-					$doc->exportCaption($this->apellido);
-					$doc->exportCaption($this->e_mail);
 					$doc->exportCaption($this->institucion);
 					$doc->exportCaption($this->rfc);
+					$doc->exportCaption($this->_email);
 				}
 				$doc->endExportRow();
 			}
@@ -883,17 +855,15 @@ class inscripcion extends DbTable
 					if ($exportPageType == "view") {
 						$doc->exportField($this->idinscripcion);
 						$doc->exportField($this->nombre);
-						$doc->exportField($this->apellido);
-						$doc->exportField($this->e_mail);
 						$doc->exportField($this->institucion);
 						$doc->exportField($this->rfc);
+						$doc->exportField($this->_email);
 					} else {
 						$doc->exportField($this->idinscripcion);
 						$doc->exportField($this->nombre);
-						$doc->exportField($this->apellido);
-						$doc->exportField($this->e_mail);
 						$doc->exportField($this->institucion);
 						$doc->exportField($this->rfc);
+						$doc->exportField($this->_email);
 					}
 					$doc->endExportRow($rowCnt);
 				}

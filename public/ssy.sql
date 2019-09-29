@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50724
 File Encoding         : 65001
 
-Date: 2019-09-29 17:28:44
+Date: 2019-09-29 17:51:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,6 @@ DROP TABLE IF EXISTS `inscripcion`;
 CREATE TABLE `inscripcion` (
   `idinscripcion` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
-  `apellido` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `institucion` varchar(45) DEFAULT NULL,
   `rfc` varchar(45) DEFAULT NULL,
@@ -32,7 +31,7 @@ CREATE TABLE `inscripcion` (
 -- ----------------------------
 -- Records of inscripcion
 -- ----------------------------
-INSERT INTO `inscripcion` VALUES ('1', 'Empty', 'Empty', 'Empty', 'Empty', 'ass');
+INSERT INTO `inscripcion` VALUES ('1', 'Empty', 'Empty', 'Empty', 'ass');
 
 -- ----------------------------
 -- Table structure for `userlevelpermissions`

@@ -716,17 +716,14 @@
       <field id="nombre">
         <phrase id="fldcaption" value="Nombre" />
       </field>
-      <field id="apellido">
-        <phrase id="fldcaption" value="Apellido" />
-      </field>
-      <field id="e_mail">
-        <phrase id="fldcaption" value="Email" />
-      </field>
       <field id="institucion">
         <phrase id="fldcaption" value="Institucion" />
       </field>
       <field id="rfc">
         <phrase id="fldcaption" value="RFC" />
+      </field>
+      <field id="_email">
+        <phrase id="fldcaption" value="email" />
       </field>
     </table>
     <table id="usuarios">

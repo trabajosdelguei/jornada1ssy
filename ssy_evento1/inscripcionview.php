@@ -99,28 +99,6 @@ $inscripcion_view->showMessage();
 </td>
 	</tr>
 <?php } ?>
-<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-	<tr id="r_apellido">
-		<td class="<?php echo $inscripcion_view->TableLeftColumnClass ?>"><span id="elh_inscripcion_apellido"><?php echo $inscripcion->apellido->caption() ?></span></td>
-		<td data-name="apellido"<?php echo $inscripcion->apellido->cellAttributes() ?>>
-<span id="el_inscripcion_apellido">
-<span<?php echo $inscripcion->apellido->viewAttributes() ?>>
-<?php echo $inscripcion->apellido->getViewValue() ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
-<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-	<tr id="r_e_mail">
-		<td class="<?php echo $inscripcion_view->TableLeftColumnClass ?>"><span id="elh_inscripcion_e_mail"><?php echo $inscripcion->e_mail->caption() ?></span></td>
-		<td data-name="e_mail"<?php echo $inscripcion->e_mail->cellAttributes() ?>>
-<span id="el_inscripcion_e_mail">
-<span<?php echo $inscripcion->e_mail->viewAttributes() ?>>
-<?php echo $inscripcion->e_mail->getViewValue() ?></span>
-</span>
-</td>
-	</tr>
-<?php } ?>
 <?php if ($inscripcion->institucion->Visible) { // institucion ?>
 	<tr id="r_institucion">
 		<td class="<?php echo $inscripcion_view->TableLeftColumnClass ?>"><span id="elh_inscripcion_institucion"><?php echo $inscripcion->institucion->caption() ?></span></td>
@@ -139,6 +117,17 @@ $inscripcion_view->showMessage();
 <span id="el_inscripcion_rfc">
 <span<?php echo $inscripcion->rfc->viewAttributes() ?>>
 <?php echo $inscripcion->rfc->getViewValue() ?></span>
+</span>
+</td>
+	</tr>
+<?php } ?>
+<?php if ($inscripcion->_email->Visible) { // email ?>
+	<tr id="r__email">
+		<td class="<?php echo $inscripcion_view->TableLeftColumnClass ?>"><span id="elh_inscripcion__email"><?php echo $inscripcion->_email->caption() ?></span></td>
+		<td data-name="_email"<?php echo $inscripcion->_email->cellAttributes() ?>>
+<span id="el_inscripcion__email">
+<span<?php echo $inscripcion->_email->viewAttributes() ?>>
+<?php echo $inscripcion->_email->getViewValue() ?></span>
 </span>
 </td>
 	</tr>

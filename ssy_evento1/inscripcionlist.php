@@ -158,24 +158,6 @@ $inscripcion_list->ListOptions->render("header", "left");
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
-<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-	<?php if ($inscripcion->sortUrl($inscripcion->apellido) == "") { ?>
-		<th data-name="apellido" class="<?php echo $inscripcion->apellido->headerCellClass() ?>"><div id="elh_inscripcion_apellido" class="inscripcion_apellido"><div class="ew-table-header-caption"><?php echo $inscripcion->apellido->caption() ?></div></div></th>
-	<?php } else { ?>
-		<th data-name="apellido" class="<?php echo $inscripcion->apellido->headerCellClass() ?>"><div class="ew-pointer" onclick="ew.sort(event,'<?php echo $inscripcion->SortUrl($inscripcion->apellido) ?>',1);"><div id="elh_inscripcion_apellido" class="inscripcion_apellido">
-			<div class="ew-table-header-btn"><span class="ew-table-header-caption"><?php echo $inscripcion->apellido->caption() ?><?php echo $Language->phrase("SrchLegend") ?></span><span class="ew-table-header-sort"><?php if ($inscripcion->apellido->getSort() == "ASC") { ?><i class="fa fa-sort-up"></i><?php } elseif ($inscripcion->apellido->getSort() == "DESC") { ?><i class="fa fa-sort-down"></i><?php } ?></span></div>
-		</div></div></th>
-	<?php } ?>
-<?php } ?>
-<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-	<?php if ($inscripcion->sortUrl($inscripcion->e_mail) == "") { ?>
-		<th data-name="e_mail" class="<?php echo $inscripcion->e_mail->headerCellClass() ?>"><div id="elh_inscripcion_e_mail" class="inscripcion_e_mail"><div class="ew-table-header-caption"><?php echo $inscripcion->e_mail->caption() ?></div></div></th>
-	<?php } else { ?>
-		<th data-name="e_mail" class="<?php echo $inscripcion->e_mail->headerCellClass() ?>"><div class="ew-pointer" onclick="ew.sort(event,'<?php echo $inscripcion->SortUrl($inscripcion->e_mail) ?>',1);"><div id="elh_inscripcion_e_mail" class="inscripcion_e_mail">
-			<div class="ew-table-header-btn"><span class="ew-table-header-caption"><?php echo $inscripcion->e_mail->caption() ?><?php echo $Language->phrase("SrchLegend") ?></span><span class="ew-table-header-sort"><?php if ($inscripcion->e_mail->getSort() == "ASC") { ?><i class="fa fa-sort-up"></i><?php } elseif ($inscripcion->e_mail->getSort() == "DESC") { ?><i class="fa fa-sort-down"></i><?php } ?></span></div>
-		</div></div></th>
-	<?php } ?>
-<?php } ?>
 <?php if ($inscripcion->institucion->Visible) { // institucion ?>
 	<?php if ($inscripcion->sortUrl($inscripcion->institucion) == "") { ?>
 		<th data-name="institucion" class="<?php echo $inscripcion->institucion->headerCellClass() ?>"><div id="elh_inscripcion_institucion" class="inscripcion_institucion"><div class="ew-table-header-caption"><?php echo $inscripcion->institucion->caption() ?></div></div></th>
@@ -191,6 +173,15 @@ $inscripcion_list->ListOptions->render("header", "left");
 	<?php } else { ?>
 		<th data-name="rfc" class="<?php echo $inscripcion->rfc->headerCellClass() ?>"><div class="ew-pointer" onclick="ew.sort(event,'<?php echo $inscripcion->SortUrl($inscripcion->rfc) ?>',1);"><div id="elh_inscripcion_rfc" class="inscripcion_rfc">
 			<div class="ew-table-header-btn"><span class="ew-table-header-caption"><?php echo $inscripcion->rfc->caption() ?><?php echo $Language->phrase("SrchLegend") ?></span><span class="ew-table-header-sort"><?php if ($inscripcion->rfc->getSort() == "ASC") { ?><i class="fa fa-sort-up"></i><?php } elseif ($inscripcion->rfc->getSort() == "DESC") { ?><i class="fa fa-sort-down"></i><?php } ?></span></div>
+		</div></div></th>
+	<?php } ?>
+<?php } ?>
+<?php if ($inscripcion->_email->Visible) { // email ?>
+	<?php if ($inscripcion->sortUrl($inscripcion->_email) == "") { ?>
+		<th data-name="_email" class="<?php echo $inscripcion->_email->headerCellClass() ?>"><div id="elh_inscripcion__email" class="inscripcion__email"><div class="ew-table-header-caption"><?php echo $inscripcion->_email->caption() ?></div></div></th>
+	<?php } else { ?>
+		<th data-name="_email" class="<?php echo $inscripcion->_email->headerCellClass() ?>"><div class="ew-pointer" onclick="ew.sort(event,'<?php echo $inscripcion->SortUrl($inscripcion->_email) ?>',1);"><div id="elh_inscripcion__email" class="inscripcion__email">
+			<div class="ew-table-header-btn"><span class="ew-table-header-caption"><?php echo $inscripcion->_email->caption() ?><?php echo $Language->phrase("SrchLegend") ?></span><span class="ew-table-header-sort"><?php if ($inscripcion->_email->getSort() == "ASC") { ?><i class="fa fa-sort-up"></i><?php } elseif ($inscripcion->_email->getSort() == "DESC") { ?><i class="fa fa-sort-down"></i><?php } ?></span></div>
 		</div></div></th>
 	<?php } ?>
 <?php } ?>
@@ -275,22 +266,6 @@ $inscripcion_list->ListOptions->render("body", "left", $inscripcion_list->RowCnt
 </span>
 </td>
 	<?php } ?>
-	<?php if ($inscripcion->apellido->Visible) { // apellido ?>
-		<td data-name="apellido"<?php echo $inscripcion->apellido->cellAttributes() ?>>
-<span id="el<?php echo $inscripcion_list->RowCnt ?>_inscripcion_apellido" class="inscripcion_apellido">
-<span<?php echo $inscripcion->apellido->viewAttributes() ?>>
-<?php echo $inscripcion->apellido->getViewValue() ?></span>
-</span>
-</td>
-	<?php } ?>
-	<?php if ($inscripcion->e_mail->Visible) { // e-mail ?>
-		<td data-name="e_mail"<?php echo $inscripcion->e_mail->cellAttributes() ?>>
-<span id="el<?php echo $inscripcion_list->RowCnt ?>_inscripcion_e_mail" class="inscripcion_e_mail">
-<span<?php echo $inscripcion->e_mail->viewAttributes() ?>>
-<?php echo $inscripcion->e_mail->getViewValue() ?></span>
-</span>
-</td>
-	<?php } ?>
 	<?php if ($inscripcion->institucion->Visible) { // institucion ?>
 		<td data-name="institucion"<?php echo $inscripcion->institucion->cellAttributes() ?>>
 <span id="el<?php echo $inscripcion_list->RowCnt ?>_inscripcion_institucion" class="inscripcion_institucion">
@@ -304,6 +279,14 @@ $inscripcion_list->ListOptions->render("body", "left", $inscripcion_list->RowCnt
 <span id="el<?php echo $inscripcion_list->RowCnt ?>_inscripcion_rfc" class="inscripcion_rfc">
 <span<?php echo $inscripcion->rfc->viewAttributes() ?>>
 <?php echo $inscripcion->rfc->getViewValue() ?></span>
+</span>
+</td>
+	<?php } ?>
+	<?php if ($inscripcion->_email->Visible) { // email ?>
+		<td data-name="_email"<?php echo $inscripcion->_email->cellAttributes() ?>>
+<span id="el<?php echo $inscripcion_list->RowCnt ?>_inscripcion__email" class="inscripcion__email">
+<span<?php echo $inscripcion->_email->viewAttributes() ?>>
+<?php echo $inscripcion->_email->getViewValue() ?></span>
 </span>
 </td>
 	<?php } ?>
