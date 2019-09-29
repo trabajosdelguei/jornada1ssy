@@ -74,25 +74,21 @@ class inscripcion extends DbTable
 
 		// nombre
 		$this->nombre = new DbField('inscripcion', 'inscripcion', 'x_nombre', 'nombre', '`nombre`', '`nombre`', 200, -1, FALSE, '`nombre`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->nombre->Required = TRUE; // Required field
 		$this->nombre->Sortable = TRUE; // Allow sort
 		$this->fields['nombre'] = &$this->nombre;
 
 		// apellido
 		$this->apellido = new DbField('inscripcion', 'inscripcion', 'x_apellido', 'apellido', '`apellido`', '`apellido`', 200, -1, FALSE, '`apellido`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->apellido->Required = TRUE; // Required field
 		$this->apellido->Sortable = TRUE; // Allow sort
 		$this->fields['apellido'] = &$this->apellido;
 
 		// e-mail
 		$this->e_mail = new DbField('inscripcion', 'inscripcion', 'x_e_mail', 'e-mail', '`e-mail`', '`e-mail`', 200, -1, FALSE, '`e-mail`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->e_mail->Required = TRUE; // Required field
 		$this->e_mail->Sortable = TRUE; // Allow sort
 		$this->fields['e-mail'] = &$this->e_mail;
 
 		// institucion
 		$this->institucion = new DbField('inscripcion', 'inscripcion', 'x_institucion', 'institucion', '`institucion`', '`institucion`', 200, -1, FALSE, '`institucion`', FALSE, FALSE, FALSE, 'FORMATTED TEXT', 'TEXT');
-		$this->institucion->Required = TRUE; // Required field
 		$this->institucion->Sortable = TRUE; // Allow sort
 		$this->fields['institucion'] = &$this->institucion;
 

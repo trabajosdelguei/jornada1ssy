@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <configuration date="2019/09/29" author="e.World Technology Ltd.">
-  <project id="{7D17B05A-1E09-4241-BCB8-DFDB2802E5B9}" file="C:\Users\aura_\OneDrive\Documents\PHPMaker\Backup\project5_792e874d8bd3dc04bb87b5764d7aa776\project5.pmp" name="project5" product="PHPMaker" version="15.0" datetime="2019/09/29 00:00:24" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0">
+  <project id="{7D17B05A-1E09-4241-BCB8-DFDB2802E5B9}" file="C:\Users\aura_\OneDrive\Documents\PHPMaker\Projects\project5.pmp" name="project5" product="PHPMaker" version="15.0" datetime="2019/09/29 17:26:43" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0">
     <table id="inscripcion" name="inscripcion" caption="Inscripción" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
     <table id="usuarios" name="usuarios" caption="usuarios" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
     <table id="userlevelpermissions" name="userlevelpermissions" caption="userlevelpermissions" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
