@@ -95,7 +95,7 @@ if (!isset($GLOBALS["ADODB_OUTP"]))
 	$GLOBALS["ADODB_OUTP"] = PROJECT_NAMESPACE . 'SetDebugMessage';
 
 // Database connection info
-$CONNECTIONS["DB"] = array("conn" => NULL, "id" => "DB", "type" => "MYSQL", "host" => "localhost", "port" => 3306, "user" => "root", "pass" => "29072011", "db" => "ssy", "qs" => "`", "qe" => "`");
+$CONNECTIONS["DB"] = array("conn" => NULL, "id" => "DB", "type" => "MYSQL", "host" => "localhost", "port" => 3306, "user" => "root", "pass" => "", "db" => "ssy", "qs" => "`", "qe" => "`");
 $CONNECTIONS[0] = &$CONNECTIONS["DB"];
 
 // Database error function
