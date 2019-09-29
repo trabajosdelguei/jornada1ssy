@@ -112,14 +112,22 @@
                             <div class="modal-body">
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="nombre">Nombre completo</label>
+                                        <label for="nombre">Nombres</label>
                                         <input type="text" class="form-control" id="nombre" name="nombre" minlength="5"
-                                            placeholder="Nombre completo" required>
+                                            placeholder="Nombres" required>
                                         <div class="invalid-feedback">
-                                            Campo incompleto
+                                            Se requieren mínimo 5 carácteres
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
+                                        <label for="apellido">Apellidos</label>
+                                        <input type="text" class="form-control" id="apellido" name="apellido" minlength="5"
+                                            placeholder="Apellidos" required>
+                                        <div class="invalid-feedback">
+                                            Se requieren mínimo 5 carácteres
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
                                         <label for="email">E-mail</label>
                                         <input type="email" class="form-control" id="email" name="email"
                                             placeholder="E-mail" data-form-field="Email" required>
@@ -127,16 +135,19 @@
                                             Campo incompleto
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="institucion">Institución de proveniencia</label>
+                                    <div class="col-md-7 mb-3">
+                                        <label for="institucion">Institución de procedencia</label>
                                         <select id="institucion" class="form-control" name="institucion"
                                             onchange="mostrarExtras(this)" required>
                                             <option value="" selected="selected">Escoge tu institución ...</option>
-                                            <option value="IMSS">IMSS</option>
-                                            <option value="ISSSTE">ISSSTE</option>
-                                            <option value="UADY">UADY</option>
+                                            <option value="anahuac">Anáhuac Mayab</option>
+                                            <option value="hraepy">Hospital Regional de Alta Especialidad de Yucatán</option>
+                                            <option value="hmrem">Hospital Militar Regional de Especialidades de Mérida</option>
+                                            <option value="imss">IMSS</option>
+                                            <option value="issste">ISSSTE</option>
+                                            <option value="naval">Novena Zona Naval</option>
+                                            <option value="ssy">Secretaría de Salud de Yucatán</option>
+                                            <option value="uady">UADY</option>
                                         </select>
                                         <div class="invalid-feedback">
                                             Escoge tu institución
@@ -144,7 +155,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <!--Campos del SSY-->
-                                        <div id="ISSSTE" class="form-row">
+                                        <div id="SSY" class="form-row">
                                             <div class="col-md-6 mb-3">
                                                 <label for="rfc">RFC</label>
                                                 <input type="text" class="form-control" id="rfc" name="rfc"
@@ -154,7 +165,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--Fin de camops del SYY-->
+                                        <!--Fin de campos del SYY-->
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -162,15 +173,13 @@
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
                                             aria-describedby="passwordHelpBlock" required>
                                         <label class="form-check-label" for="invalidCheck">
-                                            Acepta que la información proporcionada es correcta y verídica.
+                                            Constato que la información proporcionada es verídica y correcta; y doy autorización para su uso en la generación de la constancia al finalizar el evento.
                                         </label>
                                         <div class="invalid-feedback">
                                             Debes aceptar que la información proporcionada es correcta y verídica.
                                         </div>
                                         <small id="passwordHelpBlock" class="form-text text-muted">
-                                            Antes del registro, verifica que la información proporcionada en los campos
-                                            anteriores es exacta, ya que dicha información será usada para generar tu
-                                            constancia
+                                            Para cualquier solicitud de cambio, favor de contáctarse a huruz9703@gmail.com
                                         </small>
                                     </div>
                                 </div>
@@ -235,6 +244,8 @@
                             </div>
                         </div>
                     </div>
+                    <h3 class="my-2 py-2 rounded text-center bg-light">9.30 - 10.10 Inauguración</h3>
+                    <h3 class="my-2 py-2 rounded text-center bg-light">10.10 - 10.30 Receso</h3>
                     <!--Tema 2-->
                     <div class="card ponencia my-2 tema2">
 
@@ -488,11 +499,11 @@
                             </div>
                         </div>
                     </div>
+                    <h3 class="my-2 py-2 text-center bg-light">13.50 - 14.00 Clausura</h3>
                 </div>
             </div>
             <div class="hueco" id="slider"></div>
             <div class="wrapper mx-5">
-
                 <p class="text-center">Nuestros Colaboradores</p>
                 <div class="customer-logos">
 
@@ -506,11 +517,9 @@
                     <div class="slide"><img src="../images/hospital_militar.jpg"></div>
                     <div class="slide"><img src="../images/anahuac.png"></div>
                 </div>
-
             </div>
 
             <div class="hueco" id="ubicacion"></div>
-            <br>
             <div class="map-responsive mx-5">
                 <iframe src="https://maps.google.com/maps?q=hospital%20susula&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     width="1920" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -547,8 +556,8 @@
                     <div class="row mx-0 my-2 my-md-0 p-0">
                         <div class="col-5 col-md-10 mx-auto my-0 p-0"><img class="img-fluid rounded"
                                 src="../images/logossy.jpg" alt="Logo SSY"></div>
-                        <div class="col-5 col-md-10 mx-auto my-0 my-md-2 p-0"><img class="img-fluid rounded"
-                                src="../images/logossy.jpg" alt="Logo SSY"></div>
+                        <div class="col-5 col-md-10 mx-auto my-0 my-md-2 p-0"><img class="img-fluid rounded bg-white"
+                                src="../images/Secretariasalud.png" alt="Logo SSY"></div>
                     </div>
                 </div>
             </div>
