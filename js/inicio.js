@@ -8,7 +8,6 @@
         document.getElementById("rfc").required = false;
 
         $('#nombre').val(null);
-        $('#apellido').val(null);
         $('#email').val(null);
         $('#institucion').val("");
         $('#rfc').val(null);
@@ -30,7 +29,6 @@
                     }
                     var dataForm = {
                         "nombre": $('#nombre').val(),
-                        "apellido": $('#apellido').val(),
                         "email": $('#email').val(),
                         "institucion": $('#institucion').val(),
                         "rfc": rfc

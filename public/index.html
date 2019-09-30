@@ -124,14 +124,6 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="apellido">Apellidos</label>
-                                        <input type="text" class="form-control" id="apellido" name="apellido" minlength="5"
-                                            placeholder="Apellidos" required>
-                                        <div class="invalid-feedback">
-                                            Se requieren mínimo 5 carácteres
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 mb-3">
                                         <label for="email">E-mail</label>
                                         <input type="email" class="form-control" id="email" name="email"
                                             placeholder="E-mail" data-form-field="Email" required>
@@ -139,7 +131,7 @@
                                             Campo incompleto
                                         </div>
                                     </div>
-                                    <div class="col-md-7 mb-3">
+                                    <div class="col-12 mb-3">
                                         <label for="institucion">Institución de procedencia</label>
                                         <select id="institucion" class="form-control" name="institucion"
                                             onchange="mostrarExtras(this)" required>
@@ -157,20 +149,16 @@
                                             Escoge tu institución
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
                                         <!--Campos del SSY-->
-                                        <div id="SSY" class="form-row">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="rfc">RFC</label>
-                                                <input type="text" class="form-control" id="rfc" name="rfc"
-                                                    minlength="5" placeholder="RFC" required>
-                                                <div class="invalid-feedback">
-                                                    Campo incompleto
-                                                </div>
-                                            </div>
+                                    <div id="SSY" class="col-md-6 mb-3">
+                                        <label for="rfc">RFC</label>
+                                        <input type="text" class="form-control" id="rfc" name="rfc"
+                                            minlength="5" placeholder="RFC" required>
+                                        <div class="invalid-feedback">
+                                            Campo incompleto
                                         </div>
-                                        <!--Fin de campos del SYY-->
                                     </div>
+                                    <!--Fin de campos del SYY-->
                                 </div>
                                 <div class="form-group">
                                     <div class="form-check">
@@ -187,6 +175,7 @@
                                         </small>
                                     </div>
                                 </div>
+                                <div class="alert p-0 m-0">Mensaje</div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
