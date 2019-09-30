@@ -30,7 +30,7 @@ else{
     $asistencia =0;
     $nuevaConsulta= "INSERT INTO inscripcion (idinscripcion, nombre, email, institucion, rfc) VALUES (NULL,'$nombreN','$emailN','$institucionN',$rfcN)"; 
     if (mysqli_query($conexion, $nuevaConsulta)) {
-        echo json_encode(array('msg' => 'Registro exitoso, confirme su registro en su dirección email'),JSON_FORCE_OBJECT);
+        echo json_encode(array('msg' => 'Registro exitoso.'),JSON_FORCE_OBJECT);
     }
     else {
         echo json_encode(array('msg' => 'Error: '. mysqli_error($conexion)),JSON_FORCE_OBJECT);
