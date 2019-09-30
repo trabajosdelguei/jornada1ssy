@@ -223,7 +223,7 @@
                                                 </h5>
                                                 <p class="card-text">CODAMEDY</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('DR. EMILIO NOVELO')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -273,7 +273,7 @@
                                                 <h5 class="card-title">Dra. Guadalupe Utrilla Lazos</h5>
                                                 <p class="card-text">IMSS. Modelo de Gestión Institucional</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('DRA.GUADALUPE UTRILLA')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -289,7 +289,7 @@
                                                 <p class="card-text">HRAEPY. Modelo de Gestión del Consejo Nacional de
                                                     Salubridad</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('L.E GLANDY BOJORQUEZ SABIDO')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -304,7 +304,7 @@
                                                 <h5 class="card-title">Dra. Blandina del R. Lizama Maldonado</h5>
                                                 <p class="card-text">SSY. Modelo de Gestión de Calidad en Salud</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('DRA.BLANDINA LIZAMA')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -353,7 +353,7 @@
                                                 </h5>
                                                 <p class="card-text">UADY Facultad de Enfermería</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('MTRA. MARÍA REBECA SOSA')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -400,7 +400,7 @@
                                                 <h5 class="card-title">Dr. José Efraín Canto Hernández / Exposición</h5>
                                                 <p class="card-text">SEMAR. Novena Zona Naval</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('C.D. JOSÉ EFRAÍN CANTO')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -448,7 +448,7 @@
                                                 <h5 class="card-title">Dr. Carlos Gabriel Nieto Molina</h5>
                                                 <p class="card-text">ISSSTE</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('DR. CARLOS NIETO')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -462,9 +462,6 @@
                                             <div class="card-body py-1 px-2">
                                                 <h5 class="card-title">Dr. Edgar Mario Hernández Urbina</h5>
                                                 <p class="card-text">IMSS</p>
-                                                <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -478,7 +475,7 @@
                                                 <h5 class="card-title">Dr. Joaquín Ernesto Montero Aguirre</h5>
                                                 <p class="card-text">SSY</p>
                                                 <div class="m-0 p-0 d-flex justify-content-center">
-                                                    <a href="#" class="btn btn-primary">Ver información</a>
+                                                    <a href="#" class="btn btn-primary" onclick="openPDF('DR. JOAQUÍN MONTERO')">Ver información</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -651,6 +648,10 @@
             $('#estado5').removeClass("estadoC");
             $('#estado5').addClass("estadoF");
             $('#estado5').text("Finalizado");
+        }
+
+        function openPDF(pdfName){
+            window.open("../PDF/"+pdfName+".pdf","_blank");
         }
 
         $(document).ready(function () {
